@@ -15,16 +15,17 @@
         :to="nav.src"
         :class="routerLinkCls(nav.name)"
         @mouseover.native="showProduct(nav.name)"
-        @mouseout.native="closeProduct(nav.name)"
       >
         {{nav.desc}}
       </router-link>
+      <i class="phone-icon"></i>
+      <span>13710518776</span>
     </div>
     <transition name="toggle-in">
-      <div class="product-menu" v-show="showProductFlag" @mouseover="showProduct('product')" @mouseout="closeProduct('product')">
+      <div class="product-menu" v-show="showProductFlag" @mouseout.stop="closeProduct">
         <div class="product-menu-list" v-for="menus in productMenu" :key="menus.name">
-          <div class="product-menu-list-name">{{menus.name}}</div>
-          <div class="product-menu-item" v-for="(menu, index) in menus.menuList" :key="menu + index">{{menu}}</div>
+          <div class="product-menu-list-name" @click.stop.prevent="route(menus.src)">{{menus.name}}</div>
+          <div class="product-menu-item" v-for="(menu, index) in menus.menuList" :key="menu.name + index" @click.stop.prevent="route(menu.src)">{{menu.name}}</div>
         </div>
       </div>
     </transition>
@@ -41,53 +42,122 @@ export default {
           id: 0, desc: '首页', src: '/home', name: 'home'
         },
         {
-          id: 1, desc: '产品', src: '/product', name: 'product'
+          id: 1, desc: '产品中心', src: '/product', name: 'product'
         },
         {
-          id: 2, desc: '服务', src: '/service', name: 'service'
+          id: 2, desc: '食堂系统', src: '/canteen', name: 'canteen'
         },
         {
-          id: 3, desc: '下载', src: '/download', name: 'download'
+          id: 3, desc: '客户案例', src: '/case', name: 'case'
         },
         {
-          id: 4, desc: '关于', src: '/about', name: 'about'
+          id: 4, desc: '技术支持', src: '/service', name: 'service'
+        },
+        {
+          id: 5, desc: '关于我们', src: '/about', name: 'about'
         }
       ],
       productMenu: [
         {
           name: '软件产品',
+          src: '/product',
           menuList: [
-            '美食专家',
-            '商业专家',
-            '平板点菜',
-            '手机点菜',
-            '排队系统',
-            '划菜系统'
+            {
+              name: '美食专家',
+              src: '/delicacy'
+            },
+            {
+              name: '商业专家',
+              src: '/business'
+            },
+            {
+              name: '平板点菜',
+              src: '/pad'
+            },
+            {
+              name: '手机点菜',
+              src: '/phone'
+            },
+            {
+              name: '排队系统',
+              src: '/queue'
+            },
+            {
+              name: '划菜系统',
+              src: '/paddle'
+            }
           ]
         },
         {
           name: '移动互联+',
+          src: 'product',
           menuList: [
-            '微信点菜',
-            '微信会员',
-            '老板报表',
-            '外卖平台',
-            '秒付',
-            '一码多用'
+            {
+              name: '微信点菜',
+              src: '/weChat'
+            },
+            {
+              name: '微信会员',
+              src: '/member'
+            },
+            {
+              name: '老板报表',
+              src: '/operation'
+            },
+            {
+              name: '外卖平台',
+              src: '/takeOut'
+            },
+            {
+              name: '秒付',
+              src: '/lightningPay'
+            },
+            {
+              name: '一码多用',
+              src: '/code'
+            }
           ]
         },
         {
           name: '解决方案',
+          src: 'product',
           menuList: [
-            '酒楼解决方案',
-            '中西式快餐解决方案',
-            '火锅店解决方案',
-            '美食广场解决方案',
-            '酒奶茶店解决方案',
-            '咖啡厅解决方案',
-            '超市/便利店解决方案',
-            '仓储卖场解决方案',
-            '百货超市解决方案'
+            {
+              name: '酒楼解决方案',
+              src: '/restaurant'
+            },
+            {
+              name: '中西式快餐解决方案',
+              src: '/western'
+            },
+            {
+              name: '火锅店解决方案',
+              src: '/hotpot'
+            },
+            {
+              name: '美食广场解决方案',
+              src: '/square'
+            },
+            {
+              name: '奶茶店解决方案',
+              src: '/milkTea'
+            },
+            {
+              name: '咖啡厅解决方案',
+              src: '/coffee'
+            },
+            {
+              name: '超市/便利店解决方案',
+              src: '/convenienceStore'
+            },
+            {
+              name: '仓储卖场解决方案',
+              src: '/storage'
+            },
+            {
+              name: '百货超市解决方案',
+              src: ''
+            }
           ]
         }
       ],
@@ -105,14 +175,28 @@ export default {
       }
     },
     showProduct (name) {
-      if (name === 'product') {
-        this.showProductFlag = true
+      this.showProductFlag = name === 'product'
+    },
+    closeProduct (event) {
+      const el = window.event || event
+      const target = el.target
+      const to = el.relatedTarget
+      const req = to.compareDocumentPosition(target)
+      if (req === 20) {
+        if (to.className !== 'product-menu-list') {
+          this.showProductFlag = false
+        }
+      }
+      if (!(req === 20 || req === 0 || req === 10 || req === 2 || req === 4)) {
+        this.showProductFlag = false
       }
     },
-    closeProduct (name) {
-      if (name === 'product') {
-        this.routerLinkCls('')
-        this.showProductFlag = false
+    route (url) {
+      this.showProductFlag = false
+      if (this.$route.path === url) {
+        this.$router.go(0)
+      } else {
+        this.$router.push(url)
       }
     }
   }
@@ -142,6 +226,13 @@ export default {
         margin: .5em 0
   .nav-list
     height 64px
+    .phone-icon
+      display inline-block
+      width 22px
+      height 22px
+      background url("phone.png") no-repeat center
+      background-size 100% 100%
+      vertical-align middle
     .nav
       display inline-block
       width 110px
@@ -163,6 +254,8 @@ export default {
     padding: 16px
     display flex
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2)
+    background: #FFF
+    z-index 999
     .product-menu-list
       padding 8px
       .product-menu-list-name
@@ -179,4 +272,15 @@ export default {
         &:hover
           color: #F96A0A
           cursor pointer
+    &.toggle-in-enter-active
+      animation: toggle-in .5s
+    &.toggle-in-leave-active
+      transition opacity .5s
+    &.toggle-in-leave-to
+      opacity 0
+@keyframes toggle-in
+  0%
+    transform translate(-50% ,30%)
+  100%
+    transform translateY(-50%, 0)
 </style>
