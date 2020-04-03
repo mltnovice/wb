@@ -65,8 +65,7 @@ export default {
   font-size 15px
   .banner
     width 100%
-    height 590px
-    min-height 450px
+    height 30.7vw
     background url("banner_bg.png") no-repeat center
     background-size: auto 100%
     position relative
@@ -128,7 +127,46 @@ export default {
             padding 0
             margin 0
             font-size 28px
+            line-height 1.5
           .section-img-li-img
             width 100%
             border-radius 10px
+      &:nth-child(2)
+        background #F1F1F1
+@media (max-width: 860px)
+  .lightningPay
+    .banner
+      .banner-text
+        padding 8px
+        font-size 16px
+        .banner-text-title
+          font-size 22px
+          line-height 1
+        .banner-img
+          height 30px
+          margin-top: 8px
+    .lightningPay-main
+      .section
+        padding 20px 0
+        .section-text
+          flex-basis 80%
+          .section-text-title
+            font-size 28px
+@media (max-width: 490px)
+  .lightningPay
+    .banner
+      height 150px
+    .lightningPay-main
+      .section
+        padding 15px 0
+        .section-img
+          flex-basis 100%
+          height 77.3vw
+          min-width 300px
+        .section-img-wrapper
+          .section-img-li
+            .section-text-title
+              font-size 20px
+        .section-text
+          flex-basis 100%
 </style>

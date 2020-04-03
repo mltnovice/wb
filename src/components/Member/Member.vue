@@ -3,11 +3,11 @@
     <div class="banner">
       <div class="banner-text">
         <span class="banner-text-title">微信会员，让顾客离你更近</span>
-        <p>顾客自助快捷获得会员资格，享受门店会员权利</p>
-        <p>消费时无需携带实体卡，屏幕显示图片即可，方便</p>
-        <p>顾客可自行用支付宝给自己虚拟会员卡充值，去收银台可扣款</p>
-        <p>商户可在后台无限制推送任何信息给会员们</p>
-        <p>商户可在后台发送优惠券给会员们，收银台买单可直接抵扣菜金</p>
+        <p class="banner-text-p">顾客自助快捷获得会员资格，享受门店会员权利</p>
+        <p class="banner-text-p">消费时无需携带实体卡，屏幕显示图片即可，方便</p>
+        <p class="banner-text-p">顾客可自行用支付宝给自己虚拟会员卡充值，去收银台可扣款</p>
+        <p class="banner-text-p">商户可在后台无限制推送任何信息给会员们</p>
+        <p class="banner-text-p">商户可在后台发送优惠券给会员们，收银台买单可直接抵扣菜金</p>
       </div>
       <div class="banner-img"></div>
     </div>
@@ -99,7 +99,7 @@ export default {
   font-size 15px
   .banner
     width 100%
-    height 590px
+    height 30.7vw
     background url("./banner_bg.png") no-repeat center
     background-size: 100% 100%
     position relative
@@ -107,7 +107,7 @@ export default {
       position absolute
       top: 50%
       right: 15%
-      transform translateY(-80%)
+      transform translateY(-50%)
       padding 10px 20px
       width 600px
       color: #FFF
@@ -204,4 +204,51 @@ export default {
         .section-img
           background url("section5.png") no-repeat right
           background-size: auto 90%
+@media (max-width: 1160px)
+  .member
+    .banner
+      .banner-text
+        font-size 14px
+        width auto
+        .banner-text-title
+          font-size 28px
+    .member-main
+      .section
+        &:nth-child(1), &:nth-child(4), &:nth-child(5)
+          text-align center
+          .section-img
+            background-position center
+@media (max-width: 860px)
+  .member
+    .banner
+      .banner-text
+        background transparent
+        right 50%
+        transform translate(50%, -50%)
+        width 80%
+        text-align center
+        .banner-text-p
+          display none
+        .banner-text-title
+          font-size 32px
+          line-height 1
+    .member-main
+      .section
+        .section-text
+          flex-basis 80%
+          .section-text-title
+            font-size 28px
+@media (max-width: 490px)
+  .member
+    .banner
+      height 150px
+    .member-main
+      .section
+        padding 15px 0
+        .section-img
+          flex-basis 100%
+          height 77.3vw
+          min-width 300px
+        .section-text
+          flex-basis 100%
 </style>

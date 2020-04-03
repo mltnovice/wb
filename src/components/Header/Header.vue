@@ -3,7 +3,7 @@
     <div class="logo-wrapper">
       <i class="logo"></i>
       <div class="company">
-        <h3 class="company-name">广州思铭软件有限公司</h3>
+        <h3 class="company-name">思铭软件</h3>
         <h4 class="company-addr">www.gzsmsf.com</h4>
       </div>
     </div>
@@ -19,10 +19,20 @@
         {{nav.desc}}
       </router-link>
       <i class="phone-icon"></i>
-      <span>13710518776</span>
+      <span class="phone-number">13710518776</span>
+    </div>
+    <div class="nav-list-mini">
+      <i class="phone-icon"></i>
+      <span class="phone-number">13710518776</span>
+      <i class="nav-list-mini-icon iconfont" @click="showMiniMenu">&#xe62a;</i>
+    </div>
+    <div class="nav-list-mini-list-mask" v-show="showMiniMenuFlag" @click="showMiniMenu">
+      <div class="nav-list-mini-list">
+        <router-link v-for="nav in navItems" :key="nav.id" :to="nav.src">{{nav.desc}}</router-link>
+      </div>
     </div>
     <transition name="toggle-in">
-      <div class="product-menu" v-show="showProductFlag" @mouseout.stop="closeProduct">
+      <div class="product-menu" v-show="showProductFlag" @mouseout.stop="closeProduct" @click="closeProductClick">
         <div class="product-menu-list" v-for="menus in productMenu" :key="menus.name">
           <div class="product-menu-list-name" @click.stop.prevent="route(menus.src)">{{menus.name}}</div>
           <div class="product-menu-item" v-for="(menu, index) in menus.menuList" :key="menu.name + index" @click.stop.prevent="route(menu.src)">{{menu.name}}</div>
@@ -60,7 +70,7 @@ export default {
       productMenu: [
         {
           name: '软件产品',
-          src: '/product',
+          src: '/product/software',
           menuList: [
             {
               name: '美食专家',
@@ -90,7 +100,7 @@ export default {
         },
         {
           name: '移动互联+',
-          src: 'product',
+          src: '/product/mobile',
           menuList: [
             {
               name: '微信点菜',
@@ -120,7 +130,7 @@ export default {
         },
         {
           name: '解决方案',
-          src: 'product',
+          src: '/product/solution',
           menuList: [
             {
               name: '酒楼解决方案',
@@ -156,12 +166,13 @@ export default {
             },
             {
               name: '百货超市解决方案',
-              src: ''
+              src: '/supermarket'
             }
           ]
         }
       ],
-      showProductFlag: false
+      showProductFlag: false,
+      showMiniMenuFlag: false
     }
   },
   methods: {
@@ -191,6 +202,9 @@ export default {
         this.showProductFlag = false
       }
     },
+    closeProductClick () {
+      this.showProductFlag = false
+    },
     route (url) {
       this.showProductFlag = false
       if (this.$route.path === url) {
@@ -198,6 +212,9 @@ export default {
       } else {
         this.$router.push(url)
       }
+    },
+    showMiniMenu () {
+      this.showMiniMenuFlag = !this.showMiniMenuFlag
     }
   }
 }
@@ -224,15 +241,18 @@ export default {
     .company
       .company-name, .company-addr
         margin: .5em 0
+  .nav-list-mini, .nav-list-mini-list-mask
+    display none
+  .phone-icon
+    display inline-block
+    width 22px
+    height 22px
+    margin-left 30px
+    background url("phone.png") no-repeat center
+    background-size 100% 100%
+    vertical-align middle
   .nav-list
     height 64px
-    .phone-icon
-      display inline-block
-      width 22px
-      height 22px
-      background url("phone.png") no-repeat center
-      background-size 100% 100%
-      vertical-align middle
     .nav
       display inline-block
       width 110px
@@ -278,9 +298,51 @@ export default {
       transition opacity .5s
     &.toggle-in-leave-to
       opacity 0
+
 @keyframes toggle-in
   0%
     transform translate(-50% ,30%)
   100%
     transform translateY(-50%, 0)
+@media (max-width: 1000px)
+  .header
+    padding 0 10px
+    justify-content space-between
+    .logo-wrapper
+      .logo
+        width 30px
+        height 30px
+      .company
+        .company-name
+          font-size: 16px
+        .company-addr
+          font-size 12px
+    .nav-list
+      display none
+    .nav-list-mini
+      display flex
+      align-items center
+      .nav-list-mini-icon
+        display inline-block
+        font-size 30px
+        margin-left: 5px
+    .nav-list-mini-list-mask
+      display block
+      position fixed
+      top: 0
+      right 0
+      bottom 0
+      left 0
+      z-index 999
+      .nav-list-mini-list
+        position absolute
+        top: 0
+        right: 0
+        padding 15px 30px
+        background #312F2F
+        display flex
+        flex-direction column
+        line-height 2
+        color: #FFF
+        z-index 999
 </style>

@@ -192,7 +192,7 @@
       <p class="article-text-p"> 根据备份策略对数据进行备份，以保证系统的安全性。</p>
       <p class="article-text-bold">3.4操作日志管理</p>
       <p class="article-text-p">系统提供重要事件的操作日志管理，为系统安全性提供保证，并为系统故障提供参考资料。操作日志可查询，并可定时清除。系统运行日志包括系统启动记录、重要操作记录和系统出错记录。</p>
-      <img src="./article-img1.png" alt="">
+      <img class="article-img" src="./article-img1.png" alt="">
     </div>
   </div>
 </template>

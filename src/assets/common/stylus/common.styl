@@ -1,0 +1,54 @@
+.page
+  color #666
+  font-size 15px
+.banner
+    width 100%
+    height 30.7vw
+    display flex
+.banner-bg
+    width: 100%
+    padding-bottom: 30.7%
+    display flex
+.banner-text-half
+  flex-basis 50%
+  display flex
+  flex-direction column
+  justify-content center
+  padding-left 10%
+  color: #FFF
+  line-height 1.5
+
+.banner-text-title
+  margin-bottom: 10px
+  font-size 38px
+  font-weight 700
+  color #fedaaf
+
+.banner-img-half
+  flex-basis 50%
+  height 100%
+@media (max-width: 800px)
+  .banner-img-half
+    display none
+  .banner-text-half
+    flex-basis 100%
+    display flex
+    flex-direction column
+    justify-content center
+    padding 0 10%
+    box-sizing border-box
+    font-size 12px
+    overflow hidden
+  .banner-text-title
+    font-size 22px
+    line-height: 1
+    margin-bottom: 0
+@media (max-width: 490px)
+  .banner
+    height 150px
+  .banner-bg
+    padding-bottom: 150px
+  .banner-text-title
+    font-size 32px
+  .banner-text-p
+    display none

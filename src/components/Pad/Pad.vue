@@ -3,13 +3,13 @@
     <div class="banner">
       <div class="banner-text">
         <span class="banner-text-title">iPad/Android平板点餐</span>
-        <p>电子菜谱以声，色，图，文，互动性为一体，又可以让顾客自助点餐，</p>
-        <p>成为替代传统纸质菜谱的上佳选择，</p>
-        <p>替餐厅大大节省服务员人力成本。顾客的体验感得以加强，餐厅的档次亦得以提升。</p>
-        <p>扫描二维码下载APP体验奇妙的点餐之旅</p>
+        <p class="banner-text-p">电子菜谱以声，色，图，文，互动性为一体，又可以让顾客自助点餐，成为替代传统纸质菜谱的上佳选择，替餐厅大大节省服务员人力成本。顾客的体验感得以加强，餐厅的档次亦得以提升。</p>
         <div class="banner-img">
-          <img src="./ios_qrcode.png" width="160px" height="160px" alt="ios下载" style="margin-right: 10px">
-          <img src="./Android_qrcode.png" width="160px" height="160px" alt="Android下载" style="margin-left: 10px">
+          <p>扫描二维码下载APP体验奇妙的点餐之旅</p>
+          <div>
+            <img src="./ios_qrcode.png" width="160px" height="160px" alt="ios下载" style="margin-right: 10px">
+            <img src="./Android_qrcode.png" width="160px" height="160px" alt="Android下载" style="margin-left: 10px">
+          </div>
         </div>
       </div>
     </div>
@@ -74,11 +74,9 @@ export default {
   .banner
     width 100%
     height 30.73vw
-    min-height 450px
     background url("banner_bg.jpg") no-repeat center
-    background-size: 100% 100%
+    background-size: auto 100%
     .banner-text
-      width 600px
       padding 50px 0
       margin 0 auto
       display flex
@@ -93,6 +91,7 @@ export default {
         color #fedaaf
       .banner-img
         display flex
+        flex-direction column
         justify-content center
         margin-top: 20px
   .section
@@ -151,4 +150,56 @@ export default {
           height 50px
           background url("./section2-2.png") no-repeat left
           background-size auto 100%
+@media (max-width: 1280px)
+  .pad
+    .banner
+      position relative
+      .banner-text
+        position absolute
+        top: 50%
+        left 50%
+        width 80%
+        transform translate(-50%, -50%)
+        font-size 14px
+        background rgba(0,0,0,.5)
+        border-radius 6px
+        padding 20px
+        .banner-text-title
+          margin 0
+          font-size 28px
+        .banner-img
+          display none
+@media (max-width: 560px)
+  .pad
+    .banner
+      .banner-text
+        background transparent
+        .banner-text-title
+          font-size 32px
+        .banner-text-p
+          display none
+    .pad-main
+      .section
+        .section-img
+          position relative
+          .section-img-text
+            position absolute
+            left 50%
+            top 50%
+            transform translate(-50%, -50%)
+            margin 0
+            height auto
+            width 320px
+            font-size 16px
+            .section-img-text-title
+              font-size 20px
+        .section-text
+          line-height 1.7
+          .section-text-title
+            padding 0
+            font-size 22px
+@media (max-width: 490px)
+  .pad
+    .banner
+      height 150px
 </style>

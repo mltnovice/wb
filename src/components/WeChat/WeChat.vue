@@ -3,14 +3,14 @@
     <div class="banner">
       <div class="banner-text">
         <span class="banner-text-title">微信点餐</span>
-        <p>智能手机一代又迭代，互联网的商业模式也一遍又一遍的革新，丰富、智能了我们的日常生活。</p>
-        <p>使用手机点餐、扫码点餐、扫码支付，这已经是生活中的消费常态。</p>
-        <p>商户建立自己的微信公众服务号，配合建立微网站。</p>
-        <p>微网站（含微商城）和实体店餐饮软件对接，实现线上线下完美结合。</p>
-        <p>客户对微信的依赖性，粘性，互动性很强，微信的可拓展性也相当强。</p>
-        <p>顾客关注商户的服务号，即可在微信里点餐，预定，下单，消费查询乃至支付等等。</p>
-        <p>大大节省人力成本，提升翻台率，减少排队。</p>
-        <p>是一种目前看来比较完美的O2O模式</p>
+        <p class="banner-text-p">智能手机一代又迭代，互联网的商业模式也一遍又一遍的革新，丰富、智能了我们的日常生活。</p>
+        <p class="banner-text-p">使用手机点餐、扫码点餐、扫码支付，这已经是生活中的消费常态。</p>
+        <p class="banner-text-p">商户建立自己的微信公众服务号，配合建立微网站。</p>
+        <p class="banner-text-p">微网站（含微商城）和实体店餐饮软件对接，实现线上线下完美结合。</p>
+        <p class="banner-text-p">客户对微信的依赖性，粘性，互动性很强，微信的可拓展性也相当强。</p>
+        <p class="banner-text-p">顾客关注商户的服务号，即可在微信里点餐，预定，下单，消费查询乃至支付等等。</p>
+        <p class="banner-text-p">大大节省人力成本，提升翻台率，减少排队。</p>
+        <p class="banner-text-p">是一种目前看来比较完美的O2O模式</p>
       </div>
       <div class="banner-img"></div>
     </div>
@@ -19,7 +19,7 @@
         <div class="section-img"></div>
         <div class="section-text">
           <h2 class="section-text-title">订单可直接打印到厨房</h2>
-          <p>商品详情、桌号、用餐人数、顾客备注等一目了然</p>
+          <p>▪ 商品详情、桌号、用餐人数、顾客备注等一目了然</p>
           <p>▪ 紧紧抓住数亿手机及微信用户，移动点餐，时尚</p>
           <p>▪ 随时，随地，随意，随心，微信点餐，高效</p>
           <p>▪ 经测算，点餐时间，翻台率可提高20%</p>
@@ -82,14 +82,14 @@ export default {
   font-size 15px
   .banner
     width 100%
-    height 590px
+    height 30.7vw
     background url("./banner_bg.png") no-repeat center
     background-size: 100% 100%
     position relative
     .banner-text
       position absolute
-      top: 10%
-      width 500px
+      top: 50%
+      transform translateY(-50%)
       padding-left 10%
       color: #FFF
       line-height 2
@@ -119,6 +119,7 @@ export default {
         .section-text-title
           font-size 40px
           color: #666
+          margin 0
       &:nth-child(1)
         background #F1F1F1
         text-align left
@@ -162,4 +163,51 @@ export default {
         .section-img
           background url("section3.png") no-repeat right
           background-size: auto 90%
+@media (max-width: 1280px)
+  .weChat
+    .banner
+      .banner-text
+        left 50%
+        transform translate(-50%, -50%)
+        padding 20px
+        box-sizing border-box
+        line-height 1.7
+        white-space: nowrap
+        .banner-text-title
+          font-size 28px
+@media (max-width: 1125px)
+  .weChat
+    .weChat-main
+      .section
+        &:nth-child(1), &:nth-child(2), &:nth-child(3)
+          text-align center
+          .section-img
+            background-position center
+@media (max-width: 860px)
+  .weChat
+    .banner
+      .banner-text
+        .banner-text-p
+          display none
+        .banner-text-title
+          font-size 32px
+    .weChat-main
+      .section
+        .section-text
+          flex-basis 80%
+          .section-text-title
+            font-size 28px
+@media (max-width: 490px)
+  .weChat
+    .banner
+      height 150px
+    .weChat-main
+      .section
+        padding 15px 0
+        .section-img
+          flex-basis 100%
+          height 77.3vw
+          min-width 300px
+        .section-text
+          flex-basis 100%
 </style>

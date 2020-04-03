@@ -22,6 +22,14 @@ import WesternCase from '@/components/WesternCase/WesternCase'
 import RestaurantCase from '@/components/RestaurantCase/RestaurantCase'
 import ConvenienceStoreCase from '@/components/ConvenienceStoreCase/ConvenienceStoreCase'
 import StorageCase from '@/components/StorageCase/StorageCase'
+import SupermarketCase from '@/components/SupermarketCase/SupermarketCase'
+import Canteen from '@/components/Canteen/Canteen'
+import CustomerCase from '@/components/CustomerCase/CustomerCase'
+import Service from '@/components/Service/Service'
+import About from '@/components/About/About'
+import Software from '@/components/software/Software'
+import Mobile from '@/components/Mobile/Mobile'
+import Solution from '@/components/Solution/Solution'
 
 Vue.use(VueRouter)
 
@@ -42,9 +50,27 @@ const routes = [
     path: '/product',
     name: 'Product',
     component: Product,
+    redirect: '/product/software',
     meta: {
       title: '产品中心'
-    }
+    },
+    children: [
+      {
+        path: 'software',
+        name: 'Software',
+        component: Software
+      },
+      {
+        path: 'mobile',
+        name: 'Mobile',
+        component: Mobile
+      },
+      {
+        path: 'solution',
+        name: 'Solution',
+        component: Solution
+      }
+    ]
   },
   {
     path: '/delicacy',
@@ -205,13 +231,63 @@ const routes = [
     meta: {
       title: '仓储卖场解决方案'
     }
+  },
+  {
+    path: '/supermarket',
+    name: 'SupermarketCase',
+    component: SupermarketCase,
+    meta: {
+      title: '百货超市解决方案'
+    }
+  },
+  {
+    path: '/canteen',
+    name: 'Canteen',
+    component: Canteen,
+    meta: {
+      title: '食堂系统'
+    }
+  },
+  {
+    path: '/case',
+    name: 'Case',
+    component: CustomerCase,
+    meta: {
+      title: '客户案例'
+    }
+  },
+  {
+    path: '/service',
+    name: 'Service',
+    component: Service,
+    meta: {
+      title: '技术支持'
+    }
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
+    meta: {
+      title: '关于我们'
+    }
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      if ((to.name === 'Software' || to.name === 'Mobile' || to.name === 'Solution') && (from.name === 'Software' || from.name === 'Mobile' || from.name === 'Solution')) {
+        return
+      }
+      return { x: 0, y: 0 }
+    }
+  }
 })
 
 export default router

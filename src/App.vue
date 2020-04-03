@@ -10,6 +10,16 @@
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
 
+/* eslint-disable */
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1d565ad3d1ed78d474985e84f57dba2e";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+/* eslint-enable */
+
 export default {
   components: {
     Header,
@@ -25,4 +35,5 @@ export default {
   -moz-osx-font-smoothing grayscale
   text-align center
   color #2c3e50
+  min-width 320px
 </style>

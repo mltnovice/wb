@@ -3,8 +3,8 @@
     <div class="banner">
       <div class="banner-text">
         <span class="banner-text-title">外卖平台接单系统</span>
-        <p>《跃臣美食专家》餐饮软件，已全面对接"饿了么"，"美团外卖"外卖订餐接口</p>
-        <p>一站式智能接单打单服务系统，快让线上订单自动飞到店里来</p>
+        <p class="banner-text-p">《美食专家》餐饮软件，已全面对接"饿了么"，"美团外卖"外卖订餐接口</p>
+        <p class="banner-text-p">一站式智能接单打单服务系统，快让线上订单自动飞到店里来</p>
       </div>
       <div class="banner-img"></div>
     </div>
@@ -52,7 +52,7 @@ export default {
   font-size 15px
   .banner
     width 100%
-    height 590px
+    height 30.7vw
     background url("./banner_bg.png") no-repeat center
     background-size: auto 100%
     position relative
@@ -61,7 +61,6 @@ export default {
       top: 50%
       left: 15%
       transform translateY(-50%)
-      width 500px
       color: #FFF
       font-size 18px
       line-height 2
@@ -114,4 +113,46 @@ export default {
         .section-img
           background url("section3.png") no-repeat right
           background-size: auto 90%
+@media (max-width: 1280px)
+  .takeOut
+    .takeOut-main
+      .section
+        padding 20px 0
+        &:nth-child(1), &:nth-child(2), &:nth-child(3)
+          text-align center
+          .section-img
+            background-position center
+@media (max-width: 860px)
+  .takeOut
+    .banner
+      .banner-text
+        background transparent
+        text-align center
+        left 50%
+        transform translate(-50%, -50%)
+        width 90%
+        .banner-text-p
+          display none
+        .banner-text-title
+          font-size 32px
+          line-height 1
+    .takeOut-main
+      .section
+        .section-text
+          flex-basis 80%
+          .section-text-title
+            font-size 28px
+@media (max-width: 490px)
+  .takeOut
+    .banner
+      height 150px
+    .takeOut-main
+      .section
+        padding 15px 0
+        .section-img
+          flex-basis 100%
+          height 77.3vw
+          min-width 300px
+        .section-text
+          flex-basis 100%
 </style>

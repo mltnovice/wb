@@ -2,11 +2,15 @@
   <div class="queue">
     <div class="banner">
       <div class="banner-text">
-        <span class="banner-text-title">点餐排队的全新体验</span>
-        <p class="banner-text-p">解决了顾客对排队状况实时把握的需求</p>
-        <div class="banner-text-desc">顾客通过手机远程取号，在移动端实时显示排队状态，不用亲自来到店面取票，也无需再苦苦等待，让用户自由安排自己的时间，配合微信实时提醒功能，带给顾客全新的人性化的体验。</div>
-        <img class="banner-img" src="./banner_img.jpg" alt="排队预约" width="160px" height="160px">
-        <p>扫描微信二维码体验取号，预约排队。</p>
+        <div>
+          <span class="banner-text-title">点餐排队的全新体验</span>
+          <p class="banner-text-p">解决了顾客对排队状况实时把握的需求</p>
+          <div class="banner-text-desc">顾客通过手机远程取号，在移动端实时显示排队状态，不用亲自来到店面取票，也无需再苦苦等待，让用户自由安排自己的时间，配合微信实时提醒功能，带给顾客全新的人性化的体验。</div>
+        </div>
+        <div class="banner-img">
+          <img src="./banner_img.jpg" alt="排队预约" width="160px" height="160px">
+          <p>扫描微信二维码体验取号，预约排队。</p>
+        </div>
       </div>
     </div>
     <div class="queue-main">
@@ -55,16 +59,15 @@ export default {
   font-size 15px
   .banner
     width 100%
-    height: 590px
+    height: 30.7vw
     background url("banner_bg.jpg") no-repeat center
     background-size: 100% 100%
     .banner-text
-      width 600px
       padding 50px 0
       margin 0 20%
       color: #FFF
       line-height 2
-      text-align left
+      text-align center
       .banner-text-title
         margin-bottom: 10px
         font-size 38px
@@ -79,28 +82,27 @@ export default {
         background rgba(0, 0, 0, .5)
         border-radius 10px
       .banner-img
-        display flex
-        justify-content center
-        margin: 20px 10px
+        text-align center
   .queue-main
     .section
       display flex
       align-items center
       flex-wrap wrap
       justify-content space-around
-      padding 50px 0
+      padding 40px 0
       .section-img
         flex-basis 50%
         height 300px
-        min-width 450px
+        min-width 320px
       .section-text
         flex-basis 50%
         line-height 2
         font-size 16px
         .section-text-title
+          margin 0
           font-size 40px
           color: #666
-          line-height 1
+          line-height 2
       &:nth-child(1)
         .section-img
           background url("section1.png") no-repeat right
@@ -120,4 +122,68 @@ export default {
           min-width 100%
           background url("section3.jpg") no-repeat center
           background-size: auto 100%
+@media (max-width: 1725px)
+  .queue
+    .banner
+      .banner-text
+        display flex
+        align-items center
+        .banner-img
+          padding 20px
+@media (max-width: 1280px)
+  .queue
+    .banner
+      .banner-text
+        display flex
+        align-items center
+        margin 0 5%
+        padding 20px 0
+        .banner-text-title
+          font-size 22px
+        .banner-text-p
+          font-size 18px
+        .banner-text-desc
+          font-size 14px
+          padding 5px 3px
+    .queue-main
+      .section
+        padding 10px 0
+        &:nth-child(1)
+          .section-img
+            background-size: 90% auto
+        .section-text
+          .section-text-title
+            font-size 28px
+@media (max-width: 900px)
+  .queue
+    .banner
+      .banner-text
+        .banner-img
+          display none
+    .queue-main
+      .section
+        &:nth-child(2)
+          .section-text
+            text-align center
+@media (max-width: 650px)
+  .queue
+    .banner
+      .banner-text
+        display block
+        text-align center
+        .banner-text-desc
+          display none
+    .queue-main
+      .section
+        padding 10px 0
+        &:nth-child(3)
+          .section-img
+            background-size: 100% auto
+            flex-basis 65vw
+          .section-text
+            padding 0 10px
+@media (max-width: 490px)
+  .queue
+    .banner
+      height 150px
 </style>

@@ -1,15 +1,13 @@
 <template>
-  <div class="phone">
+  <div class="page">
     <div class="banner">
       <div class="banner-text">
-        <span class="banner-text-title">手机点餐</span>
-        <p>店员快速响应顾客的神器</p>
-        <p>多个服务员助理在餐厅同时使用，快速点单、响应顾客服务要求，</p>
-        <p>替代了跟后厨的传单、出菜、上菜等沟通环节。</p>
-        <p>让店员可以花更多的时间关注和服务顾客。</p>
-        <p>也可提供给顾客使用，提升顾客体验，替代传统菜单。</p>
-        <p>快下载服务员助理APP，来体验吧！</p>
+        <div>
+          <span class="banner-text-title">手机点餐</span>
+          <p class="banner-text-p">店员快速响应顾客的神器多个服务员助理在餐厅同时使用，快速点单、响应顾客服务要求，替代了跟后厨的传单、出菜、上菜等沟通环节。让店员可以花更多的时间关注和服务顾客。也可提供给顾客使用，提升顾客体验，替代传统菜单。</p>
+        </div>
         <div class="banner-img">
+          <p>快下载服务员助理APP来体验吧！</p>
           <img src="./android_qrcode.png" width="160px" height="160px" alt="Android下载">
           android版
         </div>
@@ -96,17 +94,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.phone
-  color #666
-  font-size 15px
+@import "../../assets/common/stylus/common.styl"
   .banner
-    width 100%
-    height 30.73vw
-    min-height 550px
     background url("banner_bg.jpg") no-repeat center
-    background-size: 100% 100%
+    background-size: auto 100%
     .banner-text
-      margin 0 0 0 auto
+      margin 10px 10px 10px auto
       width 600px
       padding 30px 0
       display flex
@@ -158,12 +151,15 @@ export default {
       padding-top 1.5%
       background url("./section2.jpg") no-repeat center
       text-align right
+      position relative
       .section-img-text
-        display inline-block
-        margin 5% 10% 0 0
+        position absolute
+        top: 50%
+        right 10%
+        transform translateY(-50%)
         padding 20px
         box-sizing border-box
-        width 450px
+        width 320px
         background rgba(0, 0, 0, .5)
         color: #FFF
         font-weight 700
@@ -175,4 +171,49 @@ export default {
           margin 0
         .section-img-text-p
           padding 10px 0
+@media (max-width: 1690px)
+  .banner
+    .banner-text
+      flex-direction row
+      align-items center
+@media (max-width: 1280px)
+  .banner
+    .banner-text
+      font-size 14px
+      background rgba(0,0,0,.5)
+      border-radius 6px
+      padding 20px
+      .banner-text-title
+        font-size 28px
+@media (max-width: 750px)
+  .banner
+    .banner-text
+      font-size 12px
+      .banner-img
+        display none
+  .section
+    padding 5px 0
+    .section-text-title
+      font-size 22px
+      margin 0
+      padding 5px 0
+    .section-img
+      height 100vw
+      max-height 400px
+      .section-img-text
+        font-size 16px
+        right 50%
+        transform translate(50%, -50%)
+        .section-img-text-title
+          font-size 20px
+        .section-img-text-p
+          padding 3px 0
+@media (max-width: 560px)
+  .banner
+    .banner-text
+      background transparent
+      .banner-text-title
+        font-size 32px
+      .banner-text-p
+        display none
 </style>

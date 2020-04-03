@@ -72,16 +72,13 @@
       </div>
     </div>
     <div class="separate"></div>
-    <div class="case-wrapper">
-      <h2 class="title">客户案例</h2>
-      <div class="case-container">
-        <div class="case" v-for="count in 8" :key="count" :style="caseImgCls(count)"></div>
-      </div>
-    </div>
+    <case></case>
   </div>
 </template>
 
 <script>
+import Case from '@/components/Case/Case'
+
 export default {
   name: 'Home',
   data () {
@@ -246,14 +243,10 @@ export default {
         background: `url(${img}) no-repeat center`,
         backgroundSize: 'auto 80%'
       }
-    },
-    caseImgCls (index) {
-      const img = require(`../assets/images/Home/case${index}.jpg`)
-      return {
-        background: `url(${img}) no-repeat center`,
-        backgroundSize: '80% auto'
-      }
     }
+  },
+  components: {
+    Case
   }
 }
 </script>
@@ -266,22 +259,22 @@ export default {
   .nav-slide
     .banner
       width: 100%
-      padding-bottom: 30.73%
+      padding-bottom: 30.7%
     .banner1
       background: url("../assets/images/Home/banner1.jpg") no-repeat center
-      background-size 100% auto
+      background-size auto 100%
     .banner2
       background: url("../assets/images/Home/banner2.jpg") no-repeat center
-      background-size 100% auto
+      background-size auto 100%
     .banner3
       background: url("../assets/images/Home/banner3.jpg") no-repeat center
-      background-size 100% auto
+      background-size auto 100%
     .banner4
       background: url("../assets/images/Home/banner4.jpg") no-repeat center
-      background-size 100% auto
+      background-size auto 100%
     .banner5
       background: url("../assets/images/Home/banner5.jpg") no-repeat center
-      background-size 100% auto
+      background-size auto 100%
     >>> .swiper-pagination-bullet
       background #FFF
       height .8rem
@@ -297,6 +290,7 @@ export default {
       font-weight: bold
       font-size: 40px
       line-height: 1.5
+      margin 0
     .subtitle
       text-align: center;
       font-size: 16px;
@@ -362,24 +356,40 @@ export default {
             .section-list-item-icon
               width 36px
               height 36px
-  .case-wrapper
-    width: 100%
-    max-width 1280px
-    background: #FFF
-    padding: 45px 0
-    color: #666
-    margin 0 auto
-    .title
-      text-align: center
-      font-weight: bold
-      font-size: 40px
-      line-height: 1.5
-    .case-container
-      display flex
-      flex-wrap wrap
-      justify-content space-between
-      .case
-        flex-basis: 25%
-        height 0
-        padding-bottom 25%
+@media (max-width: 1280px)
+  .home
+    .nav-slide
+      .banner
+        padding-bottom: 30.7%
+    .product
+      padding 0 1em
+      box-sizing border-box
+      .title
+        font-size 32px
+        line-height 2
+@media (max-width: 750px)
+  .home
+    .introduce
+      .section
+        padding 0 30px
+        .section-list
+          flex-basis 100%
+          padding 10px 0
+          .section-list-tittle
+            padding-bottom 10px
+@media (max-width: 490px)
+  .home
+    .nav-slide
+      .banner
+        padding-bottom: 150px
+      .banner1
+        background-size 100% 100%
+      .banner2
+        background-size 100% 100%
+      .banner3
+        background-size 100% 100%
+      .banner4
+        background-size 100% 100%
+      .banner5
+        background-size 100% 100%
 </style>

@@ -1,18 +1,17 @@
 <template>
-  <div class="delicacy">
+  <div class="page">
     <div class="banner">
-      <div class="banner-text">
+      <div class="banner-text-half">
         <span class="banner-text-title">美食专家</span>
-        <p>一体化解决桌台管理、收银、营销策略、后台管理、成本控制、</p>
-        <p>供应链等方面的问题，是一款触摸您内心世界的餐饮管理软件。</p>
-        <p>适用范围：快餐、餐厅、酒楼、火锅店、茶楼、美食广场、咖啡馆、奶茶店、酒吧、休闲中心…</p>
+        <p class="banner-text-p">一体化解决桌台管理、收银、营销策略、后台管理、成本控制、供应链等方面的问题，是一款触摸您内心世界的餐饮管理软件。</p>
+        <p class="banner-text-p">适用范围：快餐、餐厅、酒楼、火锅店、茶楼、美食广场、咖啡馆、奶茶店、酒吧、休闲中心…</p>
       </div>
-      <div class="banner-img"></div>
+      <div class="banner-img-half"></div>
     </div>
     <div class="main">
       <div class="summary">
         <h2 class="summary-title">餐饮行业支持多种模式</h2>
-        <div class="summary-iocns">
+        <div class="summary-icons">
           <div class="summary-icon">
             <img class="summary-icon-img" src="./western.png" alt="中/西餐模式"/>
             <p class="summary-icon-text">中/西餐模式</p>
@@ -79,7 +78,7 @@
             <span class="section-header-text-title">后台管理</span>
             <p>传统功能一网打尽</p>
             <p>双通道模式创立业内新标杆</p>
-            <p>连锁单店无缝切换 真Saas</p>
+            <p>连锁单店无缝切换真Saas</p>
           </div>
         </div>
         <div class="section-functions">
@@ -382,126 +381,160 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.delicacy
-  color #666
-  font-size 15px
-  .banner
-    width 100%
-    height 30.73vw
-    background url("banner_bg.jpg") no-repeat center
-    background-size: 100% 100%
-    display flex
-    .banner-text
-      flex-basis 50%
-      display flex
-      flex-direction column
-      justify-content center
-      padding-left 10%
-      color: #FFF
-      line-height 1.5
-      .banner-text-title
-        margin-bottom: 10px
-        font-size 38px
-        font-weight 700
-        color #fedaaf
-    .banner-img
-      flex-basis 50%
-      height 100%
-      background url("banner_img.png") no-repeat center
-      background-size 60% auto
-  .main
-    .summary
-      max-width 1280px
-      margin 0 auto 40px
-      color: #707981
-      .summary-title
-        font-size 24px
-        margin 40px 0
-      .summary-iocns
-        display flex
-        justify-content space-around
-    .section
-      .section-header
-        height 280px
-        color: #FFF
-        display flex
-        align-items center
-        .section-header-text
-          width 100%
-          max-width 1280px
-          margin 0 auto
-          text-align left
-          padding-left 40px
-          line-height 2
-          &:nth-child(even)
+@import "../../assets/common/stylus/common.styl"
+.banner
+  background url("banner_bg.jpg") no-repeat center
+  background-size: auto 100%
 
-          .section-header-text-title
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            padding-top: 30px;
-      .section1-header
-        background url("section1_bg.png") no-repeat center
-      .section2-header
-        background url("section2_bg.png") no-repeat center
-      .section3-header
-        background url("section3_bg.png") no-repeat center
-      .section4-header
-        background url("section4_bg.png") no-repeat center
-      .section5-header
-        background url("section5_bg.png") no-repeat center
-      .section6-header
-        background url("section6_bg.png") no-repeat center
-      .section7-header
-        background url("section7_bg.png") no-repeat center
-      .section8-header
-        background url("section8_bg.png") no-repeat center
-      .section9-header
-        background url("section9_bg.png") no-repeat center
-      .section10-header
-        background url("section10_bg.png") no-repeat center
-      .section2-header, .section4-header, .section6-header, .section8-header, .section10-header
-        .section-header-text
-          text-align right
-          padding-right 40px
-      .section-functions
-        max-width 1280px
+  .banner-img-half
+    background url("banner_img.png") no-repeat center
+    background-size 60% auto
+.main
+  .summary
+    max-width 1280px
+    margin 0 auto 40px
+    color: #707981
+
+    .summary-title
+      font-size 24px
+      margin 20px 0 10px
+
+    .summary-icons
+      display flex
+      justify-content space-around
+      align-items center
+      flex-wrap wrap
+
+      .summary-icon
+        margin 10px 20px
+
+      .summary-icon-img
+        height 80px
+        width 80px
+
+  .section
+    .section-header
+      height 280px
+      color: #FFF
+      display flex
+      align-items center
+      position relative
+
+      .section-header-text
+        position absolute
+        left 40px
+        width 400px
+        text-align left
+        line-height 2
+
+        &:nth-child(even)
+        .section-header-text-title
+          font-size: 26px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          padding-top: 30px;
+
+    .section1-header
+      background url("section1_bg.png") no-repeat center
+
+    .section2-header
+      background url("section2_bg.png") no-repeat center
+
+    .section3-header
+      background url("section3_bg.png") no-repeat center
+
+    .section4-header
+      background url("section4_bg.png") no-repeat center
+
+    .section5-header
+      background url("section5_bg.png") no-repeat center
+
+    .section6-header
+      background url("section6_bg.png") no-repeat center
+
+    .section7-header
+      background url("section7_bg.png") no-repeat center
+
+    .section8-header
+      background url("section8_bg.png") no-repeat center
+
+    .section9-header
+      background url("section9_bg.png") no-repeat center
+
+    .section10-header
+      background url("section10_bg.png") no-repeat center
+
+    .section2-header, .section4-header, .section6-header, .section8-header, .section10-header
+      .section-header-text
+        text-align right
+        left auto
+        right 40px
+
+    .section-functions
+      max-width 1280px
+      display flex
+      margin 20px auto
+      justify-content space-around
+      flex-wrap wrap
+      align-items center
+
+      .section-function-fill
+        flex-basis 50%
+
+      .section-function
+        margin 20px 0
+        padding 0 10px
+        flex-basis 50%
+        min-width 320px
+        height 86px
         display flex
-        margin 20px auto
-        justify-content space-around
-        flex-wrap wrap
         align-items center
-        .section-function-fill
-          flex-basis 50%
-        .section-function
-          margin 40px 0
-          flex-basis 50%
-          min-width 500px
+        box-sizing border-box
+
+        .iconfont
+          display inline-block
           height 86px
-          display flex
-          align-items center
-          .iconfont
-            display inline-block
-            height 86px
-            line-height 86px
-            width 86px
-            border-radius 10px
-            background #5486E2
-            font-size: 46px
-            color: #FFF
-          .section-text
-            display inline-block
-            max-width 460px
-            margin-left 10px
-            text-align left
-            .section-text-title
-              margin 8px 0
-              color: #000
-            .section-text-p
-              font-size 14px
-              line-height 1.5
-              display -webkit-box
-              -webkit-box-orient: vertical;
-              -webkit-line-clamp: 2;
-              overflow: hidden;
+          line-height 86px
+          flex-basis 86px
+          min-width 86px
+          border-radius 10px
+          background #5486E2
+          font-size: 46px
+          color: #FFF
+
+        .section-text
+          display inline-block
+          max-width 460px
+          margin-left 10px
+          text-align left
+
+          .section-text-title
+            margin 8px 0
+            color: #000
+
+          .section-text-p
+            font-size 14px
+            line-height 1.5
+            display -webkit-box
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+@media (max-width: 750px)
+  .main
+    .section
+      .section2-header, .section4-header, .section6-header, .section8-header, .section10-header
+        background-position left
+      .section1-header, .section3-header, .section5-header, .section7-header, .section9-header
+        background-position right
+      .section-header
+        .section-header-text
+          background rgba(0,0,0,.5)
+          right 50%
+          left auto
+          transform translateX(50%)
+          text-align center
+          border-radius 6px
+@media (max-width: 400px)
+  .section-header-text
+    width 100% !important
 </style>

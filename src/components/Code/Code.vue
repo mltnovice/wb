@@ -2,10 +2,12 @@
   <div class="code">
     <div class="banner">
       <div class="banner-text">
-        <span class="banner-text-title">一码多用</span>
-        <p>餐厅每张餐台上都可放置二维码图片供食客扫描点餐,餐桌上的每位客人都可以各自用手机共同浏览菜品图片，一起参与点餐下单后服务员收到订单，同食客确认后发送到厨房，避免错单、漏单,中途食客可任意加菜、增加了随意点餐的乐趣，提高餐厅营业额</p>
-        <p>赶紧扫描二维码，来体验吧！</p>
+        <div>
+          <span class="banner-text-title">一码多用</span>
+          <p class="banner-text-p">餐厅每张餐台上都可放置二维码图片供食客扫描点餐,餐桌上的每位客人都可以各自用手机共同浏览菜品图片，一起参与点餐下单后服务员收到订单，同食客确认后发送到厨房，避免错单、漏单,中途食客可任意加菜、增加了随意点餐的乐趣，提高餐厅营业额</p>
+        </div>
         <div class="banner-img">
+          <p>赶紧扫描二维码，来体验吧！</p>
           <img src="./banner_img.png" width="160px" height="160px" alt="">
         </div>
       </div>
@@ -95,8 +97,8 @@ export default {
   font-size 15px
   .banner
     width 100%
-    height 590px
-    min-height 450px
+    height 30.7vw
+    min-width 150px
     background url("banner_bg.png") no-repeat center
     background-size: auto 100%
     position relative
@@ -104,7 +106,8 @@ export default {
       width 600px
       padding 10px 20px
       position absolute
-      top: 10%
+      top: 50%
+      transform translateY(-50%)
       right 10%
       color: #FFF
       font-size 18px
@@ -157,28 +160,18 @@ export default {
       &:nth-child(2)
         color: #e56534
         padding 0
-        .section-text-wrapper
-          display flex
-          justify-content space-around
-          flex-wrap wrap
-          .section-text
-            display flex
-            align-items center
-            font-size 18px
-            line-height 35px
-            .section-text-title
-              padding 0 20px
-              line-height 1.2
-              font-size 46px
         .section-img
           height 600px
           padding-top 1.5%
           background url("./section2.png") no-repeat center
+          position relative
           .section-img-text
-            margin 0 0 0 10%
+            position absolute
+            left 50%
+            top 50%
+            transform translate(-50%, -50%)
             padding 20px
             box-sizing border-box
-            width 450px
             height 550px
             background rgba(0, 0, 0, .5)
             color: #FFF
@@ -203,4 +196,61 @@ export default {
               height 50px
               background url("./section2-2.png") no-repeat left
               background-size auto 100%
+@media (max-width: 1600px)
+  .code
+    .banner
+      .banner-text
+        display flex
+        right 50%
+        transform translate(50%, -50%)
+        width 80%
+        text-align center
+        border-radius 6px
+@media (max-width: 1280px)
+  .code
+    .banner
+      .banner-text
+        .banner-text-title
+          font-size 28px
+        .banner-img
+          display none
+    .code-main
+      .section
+        padding 20px 0
+        &:nth-child(1), &:nth-child(3)
+          .section-img-wrapper
+            .section-img-li
+              .section-text-title
+                font-size 22px
+@media (max-width: 860px)
+  .code
+    .banner
+      .banner-text
+        display block
+        text-align center
+        .banner-text-p
+          display none
+        .banner-text-title
+          font-size 32px
+          line-height 1
+    .code-main
+      .section
+        .section-text
+          flex-basis 80%
+          .section-text-title
+            font-size 28px
+        &:nth-child(2)
+          .section-img
+            position relative
+            .section-img-text
+              position absolute
+              left 50%
+              top 50%
+              transform translate(-50%, -50%)
+              margin 0
+              height auto
+              min-width 310px
+              font-size 16px
+              .section-img-text-title
+                font-size 20px
 </style>

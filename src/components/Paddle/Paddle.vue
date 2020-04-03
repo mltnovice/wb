@@ -3,9 +3,9 @@
     <div class="banner">
       <div class="banner-text">
         <span class="banner-text-title">触屏划菜系统</span>
-        <p>通过划菜系统可以帮助划菜人员，按照不同维度进行全方位的的划菜操作。</p>
-        <p>系统可以按照单品划菜，统计每个菜品所点总数，针对量大单品，可优先通知厨房处理。</p>
-        <p>同时也可以按照客位进行划菜，查看每座菜品情况，以及是否上菜，对于只剩一道菜品的桌位，提醒优先处理，提升翻台率。</p>
+        <p class="banner-text-p">通过划菜系统可以帮助划菜人员，按照不同维度进行全方位的的划菜操作。</p>
+        <p class="banner-text-p">系统可以按照单品划菜，统计每个菜品所点总数，针对量大单品，可优先通知厨房处理。</p>
+        <p class="banner-text-p">同时也可以按照客位进行划菜，查看每座菜品情况，以及是否上菜，对于只剩一道菜品的桌位，提醒优先处理，提升翻台率。</p>
       </div>
     </div>
     <div class="paddle-main">
@@ -13,20 +13,14 @@
         <div class="section-img"></div>
         <div class="section-text">
           <h3 class="section-text-title">厨打机+触摸屏划菜方案</h3>
-          <p>厨房打印菜品、厨师做菜、传菜员触屏划菜，</p>
-          <p>很好地解决了传统划菜模式的缺点，</p>
-          <p>传菜员通过触屏划菜，</p>
-          <p>提高工作效率，降低了出错机率。</p>
+          <p>厨房打印菜品、厨师做菜、传菜员触屏划菜，很好地解决了传统划菜模式的缺点，传菜员通过触屏划菜，提高工作效率，降低了出错机率。</p>
         </div>
       </div>
       <div class="section">
         <div class="section-img"></div>
         <div class="section-text">
           <h3 class="section-text-title">KDS </h3>
-          <p>全程无纸化方案，前台点餐后厨房间大屏幕按顺序显示菜品，</p>
-          <p>厨师做好后更改菜品状态，传菜员快速划菜；</p>
-          <p>有效管理上菜顺序和进度，真实记录菜品制作时间、</p>
-          <p>厨师和传菜员的工作量，菜品制作过程可进行追溯管理。</p>
+          <p>全程无纸化方案，前台点餐后厨房间大屏幕按顺序显示菜品，厨师做好后更改菜品状态，传菜员快速划菜；有效管理上菜顺序和进度，真实记录菜品制作时间、厨师和传菜员的工作量，菜品制作过程可进行追溯管理。</p>
         </div>
       </div>
       <div class="section">
@@ -66,7 +60,7 @@ export default {
   font-size 15px
   .banner
     width 100%
-    height: 590px
+    height: 30.7vw
     display flex
     align-items center
     background url("banner_bg.png") no-repeat center
@@ -86,10 +80,6 @@ export default {
         font-size 38px
         font-weight 700
         color #fedaaf
-      .banner-img
-        display flex
-        justify-content center
-        margin: 20px 10px
   .paddle-main
     .section
       display flex
@@ -105,6 +95,8 @@ export default {
         flex-basis 50%
         line-height 2
         font-size 16px
+        padding 0 20px
+        box-sizing border-box
         .section-text-title
           padding-right 10px
           font-size 40px
@@ -121,7 +113,7 @@ export default {
           background url("section2.png") no-repeat center
           background-size: auto 90%
         .section-text
-          text-align right
+          text-align center
       &:nth-child(3)
         flex-direction column-reverse
         .section-img-wrapper
@@ -139,4 +131,45 @@ export default {
             .section-img-li-img
               width 100%
               border-radius 10px
+@media (max-width: 1280px)
+  .paddle
+    .banner
+      .banner-text
+        margin 0 5%
+        padding 12px
+        font-size 18px
+        .banner-text-title
+          font-size 32px
+@media (max-width: 900px)
+  .paddle
+    .banner
+      .banner-text
+        margin 0 5%
+        padding 12px
+        font-size 18px
+        background transparent
+        text-align center
+        .banner-text-p
+          display none
+    .paddle-main
+      .section
+        .section-text
+          line-height 1.7
+          flex-basis 80%
+          .section-text-title
+            font-size 30px
+            line-height 1.5
+            margin 0
+@media (max-width: 490px)
+  .paddle
+    .banner
+      height 150px
+    .paddle-main
+      .section
+        .section-img
+          flex-basis 100%
+          height 77.3vw
+          min-width 300px
+        .section-text
+          flex-basis 100%
 </style>

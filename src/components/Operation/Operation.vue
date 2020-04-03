@@ -2,12 +2,14 @@
   <div class="operation">
     <div class="banner">
       <div class="banner-text">
-        <span class="banner-text-title">老板报表</span>
-        <p>针对老板在家里、出差或旅游时无法实时监控门店营运情况，专门推出的新一代智能手机查询系统。</p>
-        <p>“老板报表”通过与美食专家、商业专家软件产品无缝结合，使管理者通过智能移动平台即可实时掌握门店的营业情况，</p>
-        <p>查看关键的销售数据，极大改善领导决策的迟滞性，保证公司营运顺畅，提升管理效率和企业竞争力。</p>
-        <p>赶紧扫描二维码下载来掌握营业情况吧！</p>
+        <div>
+          <span class="banner-text-title">老板报表</span>
+          <p class="banner-text-p">针对老板在家里、出差或旅游时无法实时监控门店营运情况，专门推出的新一代智能手机查询系统。</p>
+          <p class="banner-text-p">“老板报表”通过与美食专家、商业专家软件产品无缝结合，使管理者通过智能移动平台即可实时掌握门店的营业情况，</p>
+          <p class="banner-text-p">查看关键的销售数据，极大改善领导决策的迟滞性，保证公司营运顺畅，提升管理效率和企业竞争力。</p>
+        </div>
         <div class="banner-img">
+          <p>赶紧扫描二维码下载来掌握营业情况吧！</p>
           <img src="./ios.png" width="160px" height="160px" alt="ios下载" style="margin-right: 10px">
           <img src="./android.png" width="160px" height="160px" alt="Android下载" style="margin-left: 10px">
         </div>
@@ -90,16 +92,16 @@ export default {
   font-size 15px
   .banner
     width 100%
-    height 590px
-    min-height 450px
+    height 30.7vw
     background url("banner_bg.png") no-repeat center
     background-size: auto 100%
     position relative
     .banner-text
       width 600px
       position absolute
-      top: 10%
+      top: 50%
       right 10%
+      transform translateY(-50%)
       color: #FFF
       line-height 2
       text-align left
@@ -165,7 +167,7 @@ export default {
         text-align right
         .section-img
           background url("section3.png") no-repeat left
-          background-size: auto 90%
+          background-size: auto 70%
       &:nth-child(4)
         text-align left
         .section-img
@@ -183,4 +185,71 @@ export default {
         .section-img
           background url("section6.png") no-repeat right
           background-size: auto 90%
+@media (max-width: 1600px)
+  .operation
+    .banner
+      .banner-text
+        display flex
+        width auto
+        padding 10px
+        background rgba(0,0,0,.5)
+        border-radius 6px
+@media (max-width: 1280px)
+  .operation
+    .banner
+      .banner-text
+        right 50%
+        transform translate(50%, -50%)
+        white-space: nowrap
+        .banner-text-title
+          font-size 28px
+        .banner-img
+          display none
+    .operation-main
+      .section
+        padding 20px 0
+        &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6)
+          text-align center
+          .section-img
+            background-position center
+        &:nth-child(1)
+          .section-img-wrapper
+            .section-img-li
+              .section-text-title
+                font-size 26px
+@media (max-width: 860px)
+  .operation
+    .banner
+      .banner-text
+        background transparent
+        text-align center
+        .banner-text-p
+          display none
+        .banner-text-title
+          font-size 32px
+          line-height 1
+    .operation-main
+      .section
+        .section-text
+          flex-basis 80%
+          .section-text-title
+            font-size 28px
+        &:nth-child(1)
+          .section-img-wrapper
+            .section-img-li
+              .section-text-title
+                font-size 20px
+@media (max-width: 490px)
+  .operation
+    .banner
+      height 150px
+    .operation-main
+      .section
+        padding 15px 0
+        .section-img
+          flex-basis 100%
+          height 77.3vw
+          min-width 300px
+        .section-text
+          flex-basis 100%
 </style>

@@ -26,7 +26,7 @@
         • 决策分析：实现决策分析各报表。<br>
       </p>
       <p class="article-text-bold">点单流程图</p>
-      <img src="./article-img1.png" alt="">
+      <img class="article-img" src="./article-img1.png" alt="">
       <p class="article-text-bold"> 方案特点</p>
       <p class="article-text-p">方案成熟，楼面布线简单，系统功能强大，点单无需背记编码，培训简单，易用性好，稳定可靠, 楼面形象好，运作顺畅，是中高档餐饮企业的优选方案。</p>
       <p class="article-text-bold">相关设备</p>
@@ -34,7 +34,7 @@
       <p class="article-text-bold">厨房打印方案</p>
       <p class="article-text-p">所谓厨打就是把客人所点的菜品,通过打印机把信息传递给厨师。如何保证快速,准确的打印出来，厨打至关重要。餐饮软件的好与坏，厨打是一个重要的衡量指标。美食专家拥有先进，核心的打印技术，具有稳定性高，多打印机数量支持，高控制强度，能控制后厨每一张单的打印情况，不会出现“打印延迟，漏单”的情况。灵活性高，能根据打印状态自动进行处理，允许定义打印机故障时的打印策略。目前美食专家完美支持目前的三种厨打方案，网口方案、驱动方案、串口方案。 </p>
       <p class="article-text-bold">酒楼营业功能列表</p>
-      <img src="./article-img2.png" alt="">
+      <img class="article-img" src="./article-img2.png" alt="">
       <p class="article-text-p" style="text-indent: 0">
         • 预订管理：主要完成顾客的预订登记，包括功能如下：<br>
         普通预订：主要通过电话形式完成顾客的预订信息登记，包括信息有：预订餐桌、预留时间、预订人信息等。<br>
