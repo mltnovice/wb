@@ -2,7 +2,7 @@
   <div class="case-wrapper">
     <h2 class="title">客户案例</h2>
     <div class="case-container">
-      <div class="case" v-for="count in 8" :key="count" :style="caseImgCls(count)"></div>
+      <div class="case" v-for="count in caseNum" :key="count" :style="caseImgCls(count)"></div>
     </div>
   </div>
 </template>
@@ -10,6 +10,12 @@
 <script>
 export default {
   name: 'Case',
+  props: {
+    caseNum: {
+      type: Number,
+      default: 8
+    }
+  },
   methods: {
     caseImgCls (index) {
       const img = require(`./case${index}.jpg`)

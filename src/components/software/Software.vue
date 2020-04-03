@@ -21,7 +21,7 @@ export default {
       softwareList: [
         {
           name: 'delicacy',
-          img: require('../../assets/images/Product/delicacy.jpg'),
+          img: require('../../assets/images/Product/delicacy.png'),
           src: '/delicacy',
           title: '美食专家',
           desc: '一体化解决桌台管理、收银、营销策略、后台管理、成本控制、供应链等方面的问题，是一款触摸您内心世界的餐饮管理软件。'

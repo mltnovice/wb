@@ -3,8 +3,12 @@
     <div class="logo-wrapper">
       <i class="logo"></i>
       <div class="company">
-        <h3 class="company-name">思铭软件</h3>
-        <h4 class="company-addr">www.gzsmsf.com</h4>
+        <h3 class="company-name">广州思铭软件有限公司</h3>
+        <div class="company-addr-wrapper">
+          <i class="line"></i>
+          <h4 class="company-addr">www.gzsmsf.com</h4>
+          <i class="line"></i>
+        </div>
       </div>
     </div>
     <div class="nav-list">
@@ -240,14 +244,23 @@ export default {
       background-size: 100% 100%
     .company
       .company-name, .company-addr
-        margin: .5em 0
+        margin: .3em 0
+        color: #1D7BDC
+      .company-addr-wrapper
+        display flex
+        align-items center
+        .company-addr
+          flex-shrink 1
+        .line
+          flex-grow 1
+          border-bottom 1px solid #1D7BDC
   .nav-list-mini, .nav-list-mini-list-mask
     display none
   .phone-icon
     display inline-block
     width 22px
     height 22px
-    margin-left 30px
+    margin-left 20px
     background url("phone.png") no-repeat center
     background-size 100% 100%
     vertical-align middle
@@ -304,19 +317,10 @@ export default {
     transform translate(-50% ,30%)
   100%
     transform translateY(-50%, 0)
-@media (max-width: 1000px)
+@media (max-width: 1060px)
   .header
     padding 0 10px
     justify-content space-between
-    .logo-wrapper
-      .logo
-        width 30px
-        height 30px
-      .company
-        .company-name
-          font-size: 16px
-        .company-addr
-          font-size 12px
     .nav-list
       display none
     .nav-list-mini
@@ -345,4 +349,22 @@ export default {
         line-height 2
         color: #FFF
         z-index 999
+@media (max-width: 490px)
+  .header
+    padding 0 10px
+    justify-content space-between
+    .logo-wrapper
+      .logo
+        width 30px
+        height 30px
+      .company
+        .company-name
+          font-size: 16px
+        .company-addr
+          font-size 12px
+@media (max-width: 390px)
+  .header
+    .nav-list-mini
+      .phone-icon, .phone-number
+        display none
 </style>

@@ -2,7 +2,7 @@
   <div class="Customer">
     <div class="banner"></div>
     <div class="Customer-main">
-      <case></case>
+      <case :case-num="caseNum"></case>
     </div>
   </div>
 </template>
@@ -11,6 +11,11 @@
 import Case from '@/components/Case/Case'
 export default {
   name: 'CustomerCase',
+  data () {
+    return {
+      caseNum: 12
+    }
+  },
   components: {
     Case
   }

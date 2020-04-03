@@ -20,8 +20,14 @@
         </div>
       </div>
       <div class="footer-right">
-        <img class="weChat" src="./qrcode.jpg" alt="微信号：13710518776"/>
-        <p>商务微信</p>
+        <div>
+          <img class="weChat" src="./qrcode.jpg" alt="微信号：13710518776"/>
+          <p>商务微信</p>
+        </div>
+        <div>
+          <img class="weChat" src="./qrcode.jpg" alt="微信号：13710518776"/>
+          <p>微信公众号</p>
+        </div>
       </div>
     </div>
     <div class="copyright">版权所有：© 2019 广州思铭软件有限公司 粤ICP备：19144170</div>
@@ -68,9 +74,11 @@ export default {
           &:hover
             cursor pointer
     .footer-right
+      display flex
       .weChat
         width 100px
         height 100px
+        margin-left 10px
   .copyright
     height 50px
     line-height 50px

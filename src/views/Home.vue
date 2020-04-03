@@ -25,26 +25,26 @@
       <p class="subtitle">我们会不断提升产品的性能和体验，为你提供更好的产品</p>
       <div class="product-container">
         <transition name="toggle-in">
-          <div class="product-item">
+          <div class="product-item" @click="jump('/product/software')">
             <i class="product-item-icon software"></i>
             <h4 class="product-item-name">软件产品</h4>
             <p class="product-item-desc">软件产品的介绍</p>
             <div class="product-item-jump">查看更多...</div>
           </div>
         </transition>
-        <div class="product-item">
+        <div class="product-item" @click="jump('/product/mobile')">
           <i class="product-item-icon inter"></i>
           <h4 class="product-item-name">移动互联+</h4>
           <p class="product-item-desc">移动互联+类型的产品</p>
           <div class="product-item-jump">查看更多...</div>
         </div>
-        <div class="product-item">
+        <div class="product-item" @click="jump('/product/solution')">
           <i class="product-item-icon solve"></i>
           <h4 class="product-item-name">解决方案</h4>
           <p class="product-item-desc">产品提供的解决方案</p>
           <div class="product-item-jump">查看更多...</div>
         </div>
-        <div class="product-item">
+        <div class="product-item" @click="jump('/case')">
           <i class="product-item-icon case"></i>
           <h4 class="product-item-name">客户案例</h4>
           <p class="product-item-desc">各大类型客户案例</p>
@@ -242,6 +242,13 @@ export default {
       return {
         background: `url(${img}) no-repeat center`,
         backgroundSize: 'auto 80%'
+      }
+    },
+    jump (url) {
+      if (this.$route.path === url) {
+        this.$router.go(0)
+      } else {
+        this.$router.push(url)
       }
     }
   },
