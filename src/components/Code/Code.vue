@@ -8,7 +8,7 @@
         </div>
         <div class="banner-img">
           <p>赶紧扫描二维码，来体验吧！</p>
-          <img src="./banner_img.png" width="160px" height="160px" alt="">
+          <img src="./banner_img.jpg" width="160px" height="160px" alt="">
         </div>
       </div>
     </div>

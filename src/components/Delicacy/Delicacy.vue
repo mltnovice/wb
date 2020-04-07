@@ -62,13 +62,6 @@
               <p class="section-text-p">票据打印机、客显与钱箱、读卡器（IC\ID\M1）、电子计价秤、短信猫与来电通，甚至还有当下最流行的智盘取菜。</p>
             </div>
           </div>
-          <div class="section-function">
-            <i class="iconfont">&#xe61e;</i>
-            <div class="section-text">
-              <h3 class="section-text-title">深度OEM，经销商可自定义</h3>
-              <p class="section-text-p">我们为一些想做自己的品牌的核心经销商，提供oem工具，利用这个工具，可以自定义跃臣云专家的功能界面。</p>
-            </div>
-          </div>
           <i class="section-function-fill"></i><i class="section-function-fill"></i>
         </div>
       </div>

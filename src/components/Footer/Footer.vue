@@ -20,12 +20,12 @@
         </div>
       </div>
       <div class="footer-right">
-        <div>
-          <img class="weChat" src="./qrcode.jpg" alt="微信号：13710518776"/>
+        <div class="weChat">
+          <img src="./qrcode.jpg" alt="微信号：13710518776" width="100px" height="100px"/>
           <p>商务微信</p>
         </div>
-        <div>
-          <img class="weChat" src="./qrcode.jpg" alt="微信号：13710518776"/>
+        <div class="weChat">
+          <img src="./qrcode2.jpg" alt="微信公众号号：13710518776" width="100px" height="100px"/>
           <p>微信公众号</p>
         </div>
       </div>
@@ -61,7 +61,7 @@ export default {
     align-items center
     justify-content space-around
     .footer-left
-      flex-basis 80%
+      flex-basis 70%
       display flex
       flex-wrap wrap
       justify-content space-around
@@ -74,16 +74,19 @@ export default {
           &:hover
             cursor pointer
     .footer-right
+      flex-basis 30%
       display flex
-      .weChat
-        width 100px
-        height 100px
-        margin-left 10px
+      justify-content space-around
   .copyright
     height 50px
     line-height 50px
     border-top 1px solid #FFF
     border-bottom 1px solid #FFF
+@media (max-width: 675px)
+  .footer
+    .footer-container
+      .footer-right
+        flex-basis 80%
 @media (max-width: 475px)
   .footer
     .footer-container

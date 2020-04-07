@@ -28,7 +28,7 @@
             <p>自助点餐怡然自得<br>图文并茂生动形象</p>
           </div>
           <div class="section-text">
-            <h3 class="section-text-title">酷炫</h3>
+            <h3 class="section-text-title">体贴</h3>
             <p>一点美味就会来<br>随呼随到服务生<br>傻瓜界面超简单</p>
           </div>
           <div class="section-text">

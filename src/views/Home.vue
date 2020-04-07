@@ -24,27 +24,25 @@
       <h2 class="title">产品中心</h2>
       <p class="subtitle">我们会不断提升产品的性能和体验，为你提供更好的产品</p>
       <div class="product-container">
-        <transition name="toggle-in">
-          <div class="product-item" @click="jump('/product/software')">
-            <i class="product-item-icon software"></i>
-            <h4 class="product-item-name">软件产品</h4>
-            <p class="product-item-desc">软件产品的介绍</p>
-            <div class="product-item-jump">查看更多...</div>
-          </div>
-        </transition>
-        <div class="product-item" @click="jump('/product/mobile')">
+        <div class="product-item fade-wrapper" ref="fadeWrapper1" @click="jump('/product/software')">
+          <i class="product-item-icon software"></i>
+          <h4 class="product-item-name">软件产品</h4>
+          <p class="product-item-desc">软件产品的介绍</p>
+          <div class="product-item-jump">查看更多...</div>
+        </div>
+        <div class="product-item fade-wrapper" ref="fadeWrapper2" @click="jump('/product/mobile')">
           <i class="product-item-icon inter"></i>
           <h4 class="product-item-name">移动互联+</h4>
           <p class="product-item-desc">移动互联+类型的产品</p>
           <div class="product-item-jump">查看更多...</div>
         </div>
-        <div class="product-item" @click="jump('/product/solution')">
+        <div class="product-item fade-wrapper" ref="fadeWrapper3" @click="jump('/product/solution')">
           <i class="product-item-icon solve"></i>
           <h4 class="product-item-name">解决方案</h4>
           <p class="product-item-desc">产品提供的解决方案</p>
           <div class="product-item-jump">查看更多...</div>
         </div>
-        <div class="product-item" @click="jump('/case')">
+        <div class="product-item fade-wrapper" ref="fadeWrapper4" @click="jump('/case')">
           <i class="product-item-icon case"></i>
           <h4 class="product-item-name">客户案例</h4>
           <p class="product-item-desc">各大类型客户案例</p>
@@ -252,6 +250,14 @@ export default {
       }
     }
   },
+  mounted () {
+    setTimeout(() => {
+      this.$refs.fadeWrapper1.classList.add('fadeIn')
+      this.$refs.fadeWrapper2.classList.add('fadeIn')
+      this.$refs.fadeWrapper3.classList.add('fadeIn')
+      this.$refs.fadeWrapper4.classList.add('fadeIn')
+    }, 1)
+  },
   components: {
     Case
   }
@@ -259,6 +265,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import "../assets/common/stylus/fade.styl"
 .home
   .separate
     height 30px
@@ -313,7 +320,6 @@ export default {
         margin: 20px;
         text-align: center;
         background: #FFF;
-        transition: ease .5s;
         &:hover
           cursor: pointer;
           transform: scale(1.1);

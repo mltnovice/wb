@@ -1,18 +1,6 @@
 <template>
   <div class="weChat">
     <div class="banner">
-      <div class="banner-text">
-        <span class="banner-text-title">微信点餐</span>
-        <p class="banner-text-p">智能手机一代又迭代，互联网的商业模式也一遍又一遍的革新，丰富、智能了我们的日常生活。</p>
-        <p class="banner-text-p">使用手机点餐、扫码点餐、扫码支付，这已经是生活中的消费常态。</p>
-        <p class="banner-text-p">商户建立自己的微信公众服务号，配合建立微网站。</p>
-        <p class="banner-text-p">微网站（含微商城）和实体店餐饮软件对接，实现线上线下完美结合。</p>
-        <p class="banner-text-p">客户对微信的依赖性，粘性，互动性很强，微信的可拓展性也相当强。</p>
-        <p class="banner-text-p">顾客关注商户的服务号，即可在微信里点餐，预定，下单，消费查询乃至支付等等。</p>
-        <p class="banner-text-p">大大节省人力成本，提升翻台率，减少排队。</p>
-        <p class="banner-text-p">是一种目前看来比较完美的O2O模式</p>
-      </div>
-      <div class="banner-img"></div>
     </div>
     <div class="weChat-main">
       <div class="section">
@@ -83,7 +71,7 @@ export default {
   .banner
     width 100%
     height 30.7vw
-    background url("./banner_bg.png") no-repeat center
+    background url("../../assets/images/Home/banner3.jpg") no-repeat center
     background-size: 100% 100%
     position relative
     .banner-text
