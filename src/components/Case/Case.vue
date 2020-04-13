@@ -14,14 +14,28 @@ export default {
     caseNum: {
       type: Number,
       default: 8
+    },
+    canteen: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
     caseImgCls (index) {
-      const img = require(`./case${index}.jpg`)
-      return {
-        background: `url(${img}) no-repeat center`,
-        backgroundSize: '80% auto'
+      if (this.canteen) {
+        const img = require(`./${index}.png`)
+        return {
+          background: `url(${img}) no-repeat center`,
+          backgroundSize: '80% auto',
+          flexBasis: '20%',
+          paddingBottom: '12%'
+        }
+      } else {
+        const img = require(`./case${index}.jpg`)
+        return {
+          background: `url(${img}) no-repeat center`,
+          backgroundSize: '80% auto'
+        }
       }
     }
   }

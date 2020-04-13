@@ -13,7 +13,7 @@ export default {
   name: 'CustomerCase',
   data () {
     return {
-      caseNum: 12
+      caseNum: 19
     }
   },
   components: {

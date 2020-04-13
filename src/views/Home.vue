@@ -96,7 +96,7 @@ export default {
           sectionIconList: [
             {
               iconSrc: require('../assets/images/Home/三种前台.png'),
-              iconName: '三种前台'
+              iconName: '多种前台'
             },
             {
               iconSrc: require('../assets/images/Home/后台管理.png'),

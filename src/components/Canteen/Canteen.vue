@@ -2,18 +2,38 @@
   <div class="canteen">
     <div class="banner">
       <swiper class="swiper" :options="swiperOption">
-        <swiper-slide>
-          <div class="banner banner1"></div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="banner banner2"></div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="banner banner3"></div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="banner banner4"></div>
-        </swiper-slide>
+        <div class="swiper-slide">
+            <div class="swiper-slide-text">
+              <div class="ani swiper-slide-text-middle" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">微信、钉钉、APP、订餐机等订餐</div>
+              <div class="ani swiper-slide-text-large" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">30天免费试用</div>
+              <div class="ani swiper-slide-text-small" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">手机APP、微信、钉钉、订餐机等多种方式提前订餐报餐，取餐时可以通过扫描二维码、打卡(或刷卡)、按指纹、扫描人脸、道闸等设备验证。系统提供食堂小外卖部，加班登记用餐、接待登记用餐、进销存等功能，实现智能化食堂管理，控制食堂成本。</div>
+            </div>
+            <img swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="./banner-img1.png" alt="" class="swiper-slide-img ani">
+          </div>
+        <div class="swiper-slide">
+            <img swiper-animate-effect="rotateIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="./banner-img2.png" alt="" class="swiper-slide-img ani">
+            <div class="swiper-slide-text">
+              <div class="ani swiper-slide-text-middle" swiper-animate-effect="rotateIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">已有1000多家单位食堂使用！</div>
+              <div class="ani swiper-slide-text-large" swiper-animate-effect="rotateIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">傻瓜化操作订餐！</div>
+              <div class="ani swiper-slide-text-large" swiper-animate-effect="rotateIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">一键批量订餐！</div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="swiper-slide-text">
+              <div class="ani swiper-slide-text-middle" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s">刷卡、指纹、二维码、人脸等方式验证取餐</div>
+              <div class="ani swiper-slide-text-large" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">智能化食堂解决方案</div>
+              <div class="ani swiper-slide-text-small" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">订餐宝通过云端Saas系统模式部署，以移动互联+云服务+大数据+物联网全方位应用解决食堂智能化管理，杜绝食堂浪费的订餐报餐管理软件,咨询热线:13710518776。</div>
+            </div>
+            <img swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="./banner-img3.png" alt="" class="swiper-slide-img ani">
+          </div>
+        <div class="swiper-slide">
+            <div class="swiper-slide-text">
+              <div class="ani swiper-slide-text-middle" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">微信、APP、网页订餐报餐</div>
+              <div class="ani swiper-slide-text-large" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">智能化食堂</div>
+              <div class="ani swiper-slide-text-small" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">政企单位食堂、医院食堂、学校食堂提前订餐报餐，根据订餐情况按需备餐，杜绝食堂浪费，实现单位内部食堂智能化管理。</div>
+            </div>
+            <img swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s" src="./banner-img4.png" alt="" class="swiper-slide-img ani">
+          </div>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
@@ -114,23 +134,43 @@
         </div>
       </div>
     </div>
+    <case :case-num="caseNum" :canteen="canteen"></case>
   </div>
 </template>
 
 <script>
+import { swiperAnimateCache, swiperAnimate } from '../../../public/js/swiper.animate1.0.3.min'
+import Case from '@/components/Case/Case'
+
 export default {
   name: 'Canteen',
   data () {
     return {
       swiperOption: {
-        autoplay: true,
+        direction: 'horizontal',
         loop: true,
+        autoplay: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
+        },
+        on: {
+          init: function () {
+            swiperAnimateCache(this) // 隐藏动画元素
+            swiperAnimate(this) // 初始化完成开始动画
+          },
+          slideChangeTransitionEnd: function () {
+            swiperAnimate(this) // 每个slide切换结束时也运行当前slide动画
+            // this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+          }
         }
-      }
+      },
+      caseNum: 20,
+      canteen: true
     }
+  },
+  components: {
+    Case
   }
 }
 </script>
@@ -139,27 +179,54 @@ export default {
 .canteen
   background #FFF
   .banner
-    width: 100%
-    height: 30.7vw
-    min-height 150px
+    width: 100%;
+    height: 30.7vw;
+    background: url("./banner-bg.jpg");
+    background-size: 100% 100%;
+    position: relative;
     min-width 320px
-  .banner1
-    background: url("./banner_bg1.png") no-repeat center
-    background-size auto 100%
-  .banner2
-    background: url("./banner_bg2.png") no-repeat center
-    background-size auto 100%
-  .banner3
-    background: url("./banner_bg3.png") no-repeat center
-    background-size auto 100%
-  .banner4
-    background: url("./banner_bg4.png") no-repeat center
-    background-size auto 100%
-  >>> .swiper-pagination-bullet
-    background #FFF
-    height .8rem
-    width .8rem
-    border-radius 50%
+    >>> .swiper-pagination-bullet
+      background #FFF
+      height .8rem
+      width .8rem
+      border-radius 50%
+    .swiper
+      height 100%
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      max-height 590px
+
+      .swiper-slide
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .swiper-slide-text
+          display flex
+          flex-direction column
+          justify-content space-around
+          height 60%
+          max-width 45%
+
+          .swiper-slide-text-large
+            color: #FFFFFF;
+            font-size: 36px;
+
+          .swiper-slide-text-middle
+            color: #FFFFFF;
+            font-size: 28px;
+
+          .swiper-slide-text-small
+            color: #FFFFFF;
+            font-size: 16px;
+            line-height 1.7
+
+        .swiper-slide-img
+          max-width 45%
+          width: 100%;
+          height: auto;
+          max-height 90%
   .canteen-main
     .section
       border-top 20px solid #F1F1F1
@@ -266,8 +333,40 @@ export default {
 @media (max-width: 1280px)
   .canteen
     .banner
-      width: 100%
-      height: 30.7vw
+      .swiper
+        .swiper-slide
+          .swiper-slide-text
+            max-width 45%
+            height 80%
+            .swiper-slide-text-small
+              display none
+            .swiper-slide-text-middle
+              font-size 20px
+              padding 0
+            .swiper-slide-text-large
+              font-size 28px
+              padding 0
+          .swiper-slide-img
+            max-width 45%
+            width 100%
+            height auto
+            max-height 90%
+@media (max-width: 490px)
+  .canteen
+    .banner
+      height: 150px
+      .swiper
+        .swiper-slide
+          .swiper-slide-text
+            .swiper-slide-text-middle
+              font-size 16px
+            .swiper-slide-text-large
+              white-space: nowrap
+              font-size 22px
+          .swiper-slide-img
+            max-width 40%
+            width 100%
+            height auto
     .canteen-main
       .section
         padding 10px 0

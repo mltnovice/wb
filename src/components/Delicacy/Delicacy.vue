@@ -102,7 +102,7 @@
       <div class="section">
         <div class="section-header section3-header">
           <div class="section-header-text">
-            <span class="section-header-text-title">手机点菜</span>
+            <span class="section-header-text-title">微信点菜</span>
             <p>秒点方便快捷</p>
             <p>秒付自由选择</p>
             <p>服务员不用桌边伺候</p>
@@ -218,7 +218,7 @@
       <div class="section">
         <div class="section-header section6-header">
           <div class="section-header-text">
-            <span class="section-header-text-title">服务员助理</span>
+            <span class="section-header-text-title">手机点菜</span>
             <p>时尚餐厅服务员必备神器，全面替代传统点菜宝，点餐结账全程手机一体化</p>
             <p>各环节大幅提升服务质量，节约人力成本，是餐饮老板的好臂助，是服务员的好朋友</p>
           </div>
