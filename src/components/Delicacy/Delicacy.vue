@@ -100,13 +100,14 @@
         </div>
       </div>
       <div class="section">
-        <div class="section-header section3-header">
+        <div class="section-header section3-header" @click="route('/weChat')">
           <div class="section-header-text">
             <span class="section-header-text-title">微信点菜</span>
             <p>秒点方便快捷</p>
             <p>秒付自由选择</p>
             <p>服务员不用桌边伺候</p>
             <p>减少成本 老板省钱</p>
+            <p class="iconfont">&#xe6f7; 点击查看更多</p>
           </div>
         </div>
         <div class="section-functions">
@@ -156,12 +157,13 @@
         </div>
       </div>
       <div class="section">
-        <div class="section-header section4-header">
+        <div class="section-header section4-header" @click="route('/member')">
           <div class="section-header-text">
             <span class="section-header-text-title">会员促销</span>
             <p>促销短信、微信推送、礼券自动发放，多管齐下</p>
             <p>多种营销手段促进会员到店频次</p>
             <p>会员享受优惠，店家财源滚滚</p>
+            <p class="iconfont">&#xe6f7; 点击查看更多</p>
           </div>
         </div>
         <div class="section-functions">
@@ -183,11 +185,12 @@
         </div>
       </div>
       <div class="section">
-        <div class="section-header section5-header">
+        <div class="section-header section5-header" @click="route('/operation')">
           <div class="section-header-text">
             <span class="section-header-text-title">手机报表</span>
             <p>基于微信的实时查询，无需安装APP，随时查询</p>
             <p>动态掌控，营业无忧</p>
+            <p class="iconfont">&#xe6f7; 点击查看更多</p>
           </div>
         </div>
         <div class="section-functions">
@@ -216,11 +219,12 @@
         </div>
       </div>
       <div class="section">
-        <div class="section-header section6-header">
+        <div class="section-header section6-header" @click="route('/phone')">
           <div class="section-header-text">
             <span class="section-header-text-title">手机点菜</span>
             <p>时尚餐厅服务员必备神器，全面替代传统点菜宝，点餐结账全程手机一体化</p>
             <p>各环节大幅提升服务质量，节约人力成本，是餐饮老板的好臂助，是服务员的好朋友</p>
+            <p class="iconfont">&#xe6f7; 点击查看更多</p>
           </div>
         </div>
         <div class="section-functions">
@@ -242,11 +246,12 @@
         </div>
       </div>
       <div class="section">
-        <div class="section-header section7-header">
+        <div class="section-header section7-header" @click="route('/pad')">
           <div class="section-header-text">
             <span class="section-header-text-title">点菜宝/平板点餐</span>
             <p>曾今的点餐之王，酒楼必选方案，如今被众多SAAS产品放弃</p>
             <p>但在我们的SAAS系统中，原汁原味地被还原，宝刀不老，给传统店家带来一片欣喜</p>
+            <p class="iconfont">&#xe6f7; 点击查看更多</p>
           </div>
         </div>
         <div class="section-functions">
@@ -268,13 +273,14 @@
         </div>
       </div>
       <div class="section">
-        <div class="section-header section8-header">
+        <div class="section-header section8-header" @click="route('/takeOut')">
           <div class="section-header-text">
             <span class="section-header-text-title">外卖平台对接</span>
             <p>支持美团外卖与饿了么外卖，实时监控2大平台订单信息</p>
             <p>能自动接单、打印送出单、通知厨房等</p>
             <p>还能自动写入交易，来自订餐平台的顾客转化为熟客</p>
             <p>方便商户深度挖掘潜在客户的价值</p>
+            <p class="iconfont">&#xe6f7; 点击查看更多</p>
           </div>
         </div>
         <div class="section-functions">
@@ -296,13 +302,14 @@
         </div>
       </div>
       <div class="section">
-        <div class="section-header section9-header">
+        <div class="section-header section9-header" @click="route('/queue')">
           <div class="section-header-text">
             <span class="section-header-text-title">排队、预定、外卖</span>
             <p>顾客现场排队取号/非现场微信排队取号，店家屏幕显示排队状态</p>
             <p>提前语音叫号或短信、微信通知</p>
             <p>顾客手机端微信预订桌台，店家及时联系</p>
             <p>系统内实现外卖功能，无需平台干预，省去高昂抽成</p>
+            <p class="iconfont">&#xe6f7; 点击查看更多</p>
           </div>
         </div>
         <div class="section-functions">
@@ -331,11 +338,12 @@
         </div>
       </div>
       <div class="section">
-        <div class="section-header section10-header">
+        <div class="section-header section10-header" @click="route('/paddle')">
           <div class="section-header-text">
             <span class="section-header-text-title">厨打划菜</span>
             <p>可与厨房打印机配合使用，全程监控厨房出品，防止因打印机故障或网络原因造成的丢单</p>
             <p>也可单独使用，实现厨房无纸化，大大降低成本及厨房小票丢失等情况</p>
+            <p class="iconfont">&#xe6f7; 点击查看更多</p>
           </div>
         </div>
         <div class="section-functions">
@@ -369,7 +377,16 @@
 
 <script>
 export default {
-  name: 'Delicacy'
+  name: 'Delicacy',
+  methods: {
+    route (url) {
+      if (this.$route.path === url) {
+        this.$router.go(0)
+      } else {
+        this.$router.push(url)
+      }
+    }
+  }
 }
 </script>
 
@@ -413,12 +430,18 @@ export default {
       align-items center
       position relative
 
+      &:hover
+        cursor pointer
+
       .section-header-text
         position absolute
         left 40px
         width 400px
         text-align left
         line-height 2
+
+        .iconfont
+          font-weight 700
 
         &:nth-child(even)
         .section-header-text-title

@@ -3,6 +3,7 @@
     <Header></Header>
     <router-view/>
     <Footer></Footer>
+    <i class="back-to-top iconfont" @click="backTop"></i>
   </div>
 </template>
 
@@ -21,6 +22,25 @@ var _hmt = _hmt || [];
 /* eslint-enable */
 
 export default {
+  data () {
+    return {
+      timer: null
+    }
+  },
+  methods: {
+    backTop () {
+      cancelAnimationFrame(this.timer)
+      this.timer = requestAnimationFrame(() => {
+        const oTop = document.body.scrollTop || document.documentElement.scrollTop
+        if (oTop > 0) {
+          scrollTo(0, oTop - 100)
+          this.timer = requestAnimationFrame(this.backTop)
+        } else {
+          cancelAnimationFrame(this.timer)
+        }
+      })
+    }
+  },
   components: {
     Header,
     Footer
@@ -36,4 +56,20 @@ export default {
   text-align center
   color #2c3e50
   min-width 320px
+  .back-to-top
+    &:before
+      content '\e607'
+      display inline-block
+      width 50px
+      height 50px
+      line-height 50px
+      font-weight bold
+      position fixed
+      z-index 99
+      right 2%
+      bottom 20%
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2)
+      border-radius 4px
+      cursor pointer
+      background-color #f1f2f5
 </style>
