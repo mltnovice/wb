@@ -3,61 +3,211 @@
     <div class="banner">
       <div class="banner-text-half">
         <span class="banner-text-title">商业专家</span>
-        <p class="banner-text-p">本系统以界面直观、易学易用、功能全面、系统稳定为主要特点 ，支持连锁及多业态经营管理模式，能从根本上满足现代商业企业的管理高效、 分析精确、降低成本的要求,帮助企业实现物流、信息流、资金流的科学管理， 为企业提高自身竞争力奠定坚实的基础。</p>
-        <p class="banner-text-p">适用范围：快餐、餐厅、酒楼、火锅店、茶楼、美食广场、咖啡馆、奶茶店、酒吧、休闲中心…</p>
+        <p class="banner-text-p">本系统基于云端部署的全新零售管理系统 共享千万商品库的大数据融合，覆盖多业态/多场景，完成线下+线上的天人合一 实现企业高效管理、全速发展的根本目标</p>
       </div>
       <div class="banner-img-half"></div>
     </div>
     <div class="business-main">
-      <div class="section">
-        <div class="section-img"></div>
-        <div class="section-text">
-          <h2 class="section-text-title">操作简单 数据精准</h2>
-          <p>商业管理功能强大完备,但操作简单，维护简便；</p>
-          <p>成本毛利核算精准，数据更具决策分析价值。</p>
+      <div class="summary">
+        <h2 class="summary-title">商超行业支持多种模式</h2>
+        <div class="summary-icons">
+          <div class="summary-icon">
+            <img class="summary-icon-img" src="./syms-sc.png" alt="中小商超"/>
+            <p class="summary-icon-text">中小商超</p>
+          </div>
+          <div class="summary-icon">
+            <img class="summary-icon-img" src="./syms-bld.png" alt="便利店"/>
+            <p class="summary-icon-text">便利店</p>
+          </div>
+          <div class="summary-icon">
+            <img class="summary-icon-img" src="./syms-lf.png" alt="量贩店"/>
+            <p class="summary-icon-text">量贩店</p>
+          </div>
+          <div class="summary-icon">
+            <img class="summary-icon-img" src="./syms-zmd.png" alt="专卖店"/>
+            <p class="summary-icon-text">专卖店</p>
+          </div>
+          <div class="summary-icon">
+            <img class="summary-icon-img" src="./syms-rh.png" alt="洗化店"/>
+            <p class="summary-icon-text">洗化店</p>
+          </div>
+          <div class="summary-icon">
+            <img class="summary-icon-img" src="./syms-qt.png" alt="其它行业"/>
+            <p class="summary-icon-text">其它行业</p>
+          </div>
         </div>
       </div>
       <div class="section">
-        <div class="section-img"></div>
-        <div class="section-text">
-          <h2 class="section-text-title">安装维护 操作简便</h2>
-          <p>提供百万条标准条码库，可自行维护，厚积薄发</p>
-          <p>向导式图形操作界面，业务流程清晰，操作简单直观</p>
-          <p>培训简单，一学就会，商户傻瓜式快速上手，后期维护量极少</p>
+        <div class="section-header section1-header">
+          <div class="section-header-text">
+            <span class="section-header-text-title">锐意进取</span>
+            <p>C/S + B/S 零售解决方案</p>
+          </div>
+        </div>
+        <div class="section-functions">
+          <div class="section-function">
+            <i class="iconfont">&#xe66a;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">后台双通道</h3>
+              <p class="section-text-p">店内员工使用程序版，响应快、操作灵活<br>同时提供网页版入口，无需安装、方便简单；多入口自由选择</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xec89;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">前台双通道</h3>
+              <p class="section-text-p">一套是传统界面新改版、熟悉的操作熟悉的味道<br>一套是全新力作、火力全开，时代新宠</p>
+            </div>
+          </div>
+          <i class="section-function-fill"></i><i class="section-function-fill"></i>
         </div>
       </div>
       <div class="section">
-        <div class="section-li">
-          <div class="section-li-img"></div>
-          <p>丰富多彩的多渠道支付</p>
+        <div class="section-header section2-header">
+          <div class="section-header-text">
+            <span class="section-header-text-title">传承经典</span>
+            <p>十年沉淀，含原有CS系统所有功能</p>
+          </div>
         </div>
-        <div class="section-li">
-          <div class="section-li-img"></div>
-          <p>提供会员卡、储值卡、积分卡功能，灵活的积分规则设置</p>
-        </div>
-        <div class="section-li">
-          <div class="section-li-img"></div>
-          <p>零售特价单、会员特价单、固定时间特价单等多种促销方式</p>
+        <div class="section-functions">
+          <div class="section-function">
+            <i class="iconfont">&#xe66a;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">库存管理</h3>
+              <p class="section-text-p">●商品管理  ●厂商管理  ●采购管理<br>●批发管理  ●配送管理  ●盘点管理</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xec89;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">经营管理</h3>
+              <p class="section-text-p">●员工管理  ●连锁管理  ●生鲜管理<br>●促销管理  ●会员营销  ●联营管理</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xe66a;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">财务管理</h3>
+              <p class="section-text-p">●营业报表  ●结算管理  ●应收应付对账<br>●利润报表  ●经营费用  ●资金流向表</p>
+            </div>
+          </div>
+          <i class="section-function-fill"></i><i class="section-function-fill"></i>
         </div>
       </div>
       <div class="section">
-        <div class="section-img"></div>
-        <div class="section-text">
-          <h2 class="section-text-title">报表图形化分析 数据分析更直观</h2>
-          <p>系统提供强大的统计分析功能，可以对采购、批发、库存、销售、POS销售等业务数据按照各种不同的口径进行统计分析，满足公司领导层的经营决策</p>
+        <div class="section-header section3-header">
+          <div class="section-header-text">
+            <span class="section-header-text-title">智能革新</span>
+            <p>整合了微信公众号、小程序、APP等互联网新元素</p>
+            <p>全新冲击，王者归来</p>
+          </div>
+        </div>
+        <div class="section-functions">
+          <div class="section-function">
+            <i class="iconfont">&#xe66a;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">海纳百川</h3>
+              <p class="section-text-p">覆盖千万级别零售业态所有商品的大数据，只要在云专家出现过的商品，都会留下一丝痕迹。综合云计算取到参考进价与参考售价，为商家创造便利，建档就是这么轻松</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xe66a;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">前台POS系统</h3>
+              <p class="section-text-p">●销售收银  ●盘点  ●称重  ●会员开卡，退卡，充值<br>●外卖接单  ●库存查询  ●商品查询等</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xec89;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">微信线上商城</h3>
+              <p class="section-text-p">线上商城，微信自营配送（门店自己配送，达达配送）。线上订单实时推送到店</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xe613;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">外卖系统</h3>
+              <p class="section-text-p">无缝对接美团，饿了么外卖平台，核销美团点评优惠券</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xec89;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">移动支付</h3>
+              <p class="section-text-p">支付宝、微信、云闪付、扫码支付、刷脸支付</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xe613;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">微信小程序订货</h3>
+              <p class="section-text-p">分店店长可手机订货（可预付款），总部收集信息集中配送</p>
+            </div>
+          </div>
+          <i class="section-function-fill"></i><i class="section-function-fill"></i>
         </div>
       </div>
       <div class="section">
-        <div class="section-text">
-          <h2 class="section-text-title">严谨高效的后台管理系统</h2>
-          <p class="section-text-li">严谨的类别管理、品牌管理 多级配方管理</p>
-          <p class="section-text-li">严格的权限控制保证公司业务流程的规范化、数据的安全性</p>
-          <p class="section-text-li">应收应付管理，精确的财务监控</p>
-          <p class="section-text-li">支持手动补货及动态智能补货（根据日均销量及商品的采购周期动态计算）</p>
-          <p class="section-text-li">大小包装单位换算，精确管理多包装规格的商品库存</p>
-          <p class="section-text-li">总部能对分店的库存做统一调配管理</p>
-          <p class="section-text-li">先进的采购、收货管理</p>
-          <p class="section-text-li">批发出入库、收款、促销员与客户的关系管理</p>
+        <div class="section-header section4-header" @click="route('/member')">
+          <div class="section-header-text">
+            <span class="section-header-text-title">会员营销</span>
+            <p>会员数据全面打通，更好的进行精准营销</p>
+            <p>基于卡券发放核销，代金券，折扣券，商品券，充值方案</p>
+            <p>关注有礼，各种发券，大转盘抽奖，裂变拉新</p>
+            <p class="iconfont">&#xe6f7; 点击查看更多</p>
+          </div>
+        </div>
+        <div class="section-functions">
+          <div class="section-function">
+            <i class="iconfont">&#xe641;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">会员管理</h3>
+              <p class="section-text-p">开卡、充值、优惠、消费、积分兑换、消费查询，手机在手全都有； 不同卡不同折扣，等级不同特权不同，从士兵到将军，消费增加自动升级。</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xe644;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">会员营销</h3>
+              <p class="section-text-p">可通过促销短信、微信推送、发放礼券等方法，刺激顾客前来消费，提升店家营业额； 通过等级特权等方式，增加顾客与店家黏性，培养忠实粉丝。</p>
+            </div>
+          </div>
+          <i class="section-function-fill"></i><i class="section-function-fill"></i>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header section5-header" @click="route('/operation')">
+          <div class="section-header-text">
+            <span class="section-header-text-title">手机报表</span>
+            <p>基于微信的实时查询，无需安装APP，随时查询</p>
+            <p>动态掌控，营业无忧</p>
+            <p class="iconfont">&#xe6f7; 点击查看更多</p>
+          </div>
+        </div>
+        <div class="section-functions">
+          <div class="section-function">
+            <i class="iconfont">&#xe615;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">连锁/单店</h3>
+              <p class="section-text-p">老板看所有，区域经理看好几家，店长只能看自己家； 分级权限，各司其职。</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xe747;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">今日概况</h3>
+              <p class="section-text-p">今日应收、已结金额、交易数、来客数、票单价、外卖、各门店一览； 24小时销售趋势，还能对比前2周。</p>
+            </div>
+          </div>
+          <div class="section-function">
+            <i class="iconfont">&#xe673;</i>
+            <div class="section-text">
+              <h3 class="section-text-title">门店监控</h3>
+              <p class="section-text-p">无论老板身处何处，都能通过微信实时查询门店营业额、实时桌况、来客分析、畅销商品、退货数据、即时库存，动态掌握核心指标趋势，真正做到随时随地，一手掌控。</p>
+            </div>
+          </div>
+          <i class="section-function-fill"></i><i class="section-function-fill"></i>
         </div>
       </div>
     </div>
@@ -66,7 +216,16 @@
 
 <script>
 export default {
-  name: 'Business'
+  name: 'Business',
+  methods: {
+    route (url) {
+      if (this.$route.path === url) {
+        this.$router.go(0)
+      } else {
+        this.$router.push(url)
+      }
+    }
+  }
 }
 </script>
 
@@ -80,109 +239,142 @@ export default {
     background url("banner_img.png") no-repeat center
     background-size 60% auto
 .business-main
-  .section
-    display flex
-    align-items center
-    flex-wrap wrap
-    justify-content space-around
-    padding 50px 0
+  .summary
+    max-width 1280px
+    margin 0 auto 40px
+    color: #707981
 
-    .section-img
-      flex-basis 50%
-      height 320px
-      min-width 300px
+    .summary-title
+      font-size 24px
+      margin 20px 0 10px
 
-    .section-text
-      flex-basis 50%
-      line-height 1.5
-      font-size 16px
-
-      .section-text-title
-        margin 0
-        font-size 40px
-        color: #666
-        line-height 1.7
-
-    &:nth-child(1)
-      .section-img
-        background url("section1.png") no-repeat center
-        background-size: auto 90%
-
-    &:nth-child(2)
-      background #F1F1F1
-      flex-direction row-reverse
-
-      .section-img
-        background url("section2.png") no-repeat center
-        background-size: auto 90%
-
-    &:nth-child(3)
+    .summary-icons
+      display flex
+      justify-content space-around
       align-items center
       flex-wrap wrap
 
-      .section-li
-        height 220px
-        flex-basis 33%
-        max-width 360px
-        min-width 250px
+      .summary-icon
+        margin 10px 20px
 
-        .section-li-img
-          width 150px
-          height 150px
-          margin 10px auto
+      .summary-icon-img
+        height 80px
+        width 80px
+  .section
+    .section-header
+      height 280px
+      color: #FFF
+      display flex
+      align-items center
+      position relative
 
-        &:nth-child(1)
-          .section-li-img
-            background url("section3-1.png") no-repeat center
-            background-size 90%
+      &:hover
+        cursor pointer
 
-        &:nth-child(2)
-          .section-li-img
-            background url("section3-2.png") no-repeat center
-            background-size 90%
+      .section-header-text
+        position absolute
+        left 10%
+        width 400px
+        text-align left
+        line-height 2
 
-        &:nth-child(3)
-          .section-li-img
-            background url("section3-3.png") no-repeat center
-            background-size 90%
+        .iconfont
+          font-weight 700
 
-    &:nth-child(4)
-      background #F1F1F1
-      flex-direction column-reverse
+        &:nth-child(even)
+        .section-header-text-title
+          font-size: 26px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          padding-top: 30px;
 
-      .section-img
-        padding-bottom 26%
-        min-width 100%
-        background url("section4.png") no-repeat center
-        background-size: auto 100%
+    .section1-header
+      background url("section1_bg.png") no-repeat center
 
-    &:nth-child(5)
-      text-align left
+    .section2-header
+      background url("section2_bg.png") no-repeat center
 
-      .section-text
-        flex-basis 80%
+    .section3-header
+      background url("section3_bg.png") no-repeat center
 
-        .section-text-li
-          line-height 1.7
+    .section4-header
+      background url("section4_bg.png") no-repeat center
 
-          &:before
-            content '●'
-            color: #076A8A
-            margin-right 5px
+    .section5-header
+      background url("section5_bg.png") no-repeat center
+
+    .section2-header, .section4-header, .section6-header, .section8-header, .section10-header
+      .section-header-text
+        margin-right 10%
+        text-align right
+        left auto
+        right 40px
+
+    .section-functions
+      max-width 1280px
+      display flex
+      margin 20px auto
+      justify-content space-around
+      flex-wrap wrap
+      align-items center
+
+      .section-function-fill
+        flex-basis 50%
+
+      .section-function
+        margin 20px 0
+        padding 0 10px
+        flex-basis 50%
+        min-width 320px
+        height 86px
+        display flex
+        align-items center
+        box-sizing border-box
+
+        .iconfont
+          display inline-block
+          height 86px
+          line-height 86px
+          flex-basis 86px
+          min-width 86px
+          border-radius 10px
+          background #5486E2
+          font-size: 46px
+          color: #FFF
+
+        .section-text
+          display inline-block
+          max-width 460px
+          margin-left 10px
+          text-align left
+
+          .section-text-title
+            margin 8px 0
+            color: #000
+
+          .section-text-p
+            font-size 14px
+            line-height 1.5
+            display -webkit-box
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
 @media (max-width: 750px)
-  .business-main
+  .main
     .section
-      padding 20px 0
-      .section-text
-        font-size 14px
-        padding 10px
-        .section-text-title
-          font-size 28px
-@media (max-width: 450px)
-  .business-main
-    .section
-      padding 10px 0
-      .section-text
-        .section-text-title
-          font-size 20px
+      .section2-header, .section4-header, .section6-header, .section8-header, .section10-header
+        background-position left
+      .section1-header, .section3-header, .section5-header, .section7-header, .section9-header
+        background-position right
+      .section-header
+        .section-header-text
+          background rgba(0,0,0,.5)
+          right 50%
+          left auto
+          transform translateX(50%)
+          text-align center
+          border-radius 6px
+@media (max-width: 400px)
+  .section-header-text
+    width 100% !important
 </style>
