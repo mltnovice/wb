@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Product from '@/views/Product'
 import Delicacy from '@/components/Delicacy/Delicacy'
 import Business from '@/components/Business/Business'
+import kxlBusiness from '@/components/kxlBusiness/kxlBusiness'
 import Pad from '@/components/Pad/Pad'
 import Phone from '@/components/Phone/Phone'
 import Queue from '@/components/Queue/Queue'
@@ -86,6 +87,14 @@ const routes = [
     component: Business,
     meta: {
       title: '商业专家'
+    }
+  },
+  {
+    path: '/kxlBusiness',
+    name: 'kxlBusiness',
+    component: kxlBusiness,
+    meta: {
+      title: '客享来-商业专家'
     }
   },
   {

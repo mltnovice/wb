@@ -85,6 +85,10 @@ export default {
               src: '/business'
             },
             {
+              name: '客享来-商业版',
+              src: '/kxlBusiness'
+            },
+            {
               name: '平板点菜',
               src: '/pad'
             },

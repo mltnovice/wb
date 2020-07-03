@@ -3,6 +3,7 @@
     <h2 class="title">客户案例</h2>
     <div class="case-container">
       <div class="case" v-for="count in caseNum" :key="count" :style="caseImgCls(count)"></div>
+      <i class="case-fill"></i><i class="case-fill"></i><i class="case-fill"></i><i class="case-fill"></i>
     </div>
   </div>
 </template>
@@ -64,6 +65,9 @@ export default {
       flex-basis: 25%
       height 0
       padding-bottom 25%
+    .case-fill
+      flex-basis: 25%
+      height 0
 @media (max-width: 1280px)
   .case-wrapper
     padding: 10px 0

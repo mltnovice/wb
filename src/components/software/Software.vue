@@ -9,6 +9,7 @@
         <p class="software-contain-item-name">{{software.title}}</p>
         <p class="software-contain-item-desc">{{software.desc}}</p>
       </div>
+      <i class="fill"></i><i class="fill"></i><i class="fill"></i>
     </div>
   </div>
 </template>
@@ -32,6 +33,13 @@ export default {
           src: '/business',
           title: '商业专家',
           desc: '本系统以界面直观、易学易用、功能全面、系统稳定为主要特点，支持连锁及多业态经营管理模式，能从根本上满足现代商业企业的管理高效、分析精确、降低成本的要求，帮助企业实现物流、信息流、资金流的科学管理，为企业提高自身竞争力奠定坚实的基础。'
+        },
+        {
+          name: 'kxlBusiness',
+          img: require('../../assets/images/Product/KXL.png'),
+          src: '/kxlBusiness',
+          title: '客享来-商业版',
+          desc: '"客享来--商业版"是全新打造的SaaS互联网产品共享千万商品库的大数据融合，覆盖多业态/多场景，真正实现商业管理系统的互通互联实现企业高效管理、成本降低的根本目标。'
         },
         {
           name: 'phone_order',

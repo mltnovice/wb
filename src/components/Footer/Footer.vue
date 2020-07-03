@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div class="copyright">版权所有：© 2019 广州思铭软件有限公司 粤ICP备：19144170</div>
+    <div class="copyright">版权所有：© 2019 广州思铭软件有限公司 <a href="http://www.beian.miit.gov.cn" target="_blank"  class="copyright-link">粤ICP备19144170号-1</a></div>
   </div>
 </template>
 
@@ -82,11 +82,26 @@ export default {
     line-height 50px
     border-top 1px solid #FFF
     border-bottom 1px solid #FFF
+    .copyright-link
+      &:hover
+        color: #1d7bdc
 @media (max-width: 675px)
   .footer
     .footer-container
+      .footer-left
+        width 100%
+        flex-basis 100%
+        .product-link
+          width 180px
+          .product-link-text
+            margin 15px 0
+            font-size 12px
       .footer-right
-        flex-basis 80%
+        width 100%
+        flex-basis 100%
+        font-size 12px
+    .copyright
+      font-size 10px
 @media (max-width: 475px)
   .footer
     .footer-container
