@@ -142,19 +142,6 @@ export default {
     background url("../../assets/images/Home/banner3.jpg") no-repeat center
     background-size: 100% 100%
     position relative
-    .banner-text
-      position absolute
-      top: 50%
-      transform translateY(-50%)
-      padding-left 10%
-      color: #FFF
-      line-height 2
-      text-align left
-      .banner-text-title
-        margin-bottom: 10px
-        font-size 38px
-        font-weight 700
-        color #fedaaf
   .weChat-main
     .section
       display flex

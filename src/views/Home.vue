@@ -21,7 +21,7 @@
       </swiper>
     </div>
     <div class="product">
-      <h2 class="title">产品中心</h2>
+      <h2 class="title">餐饮系统</h2>
       <p class="subtitle">我们会不断提升产品的性能和体验，为你提供更好的产品</p>
       <div class="product-container">
         <div class="product-item fade-wrapper" ref="fadeWrapper1" @click="jump('/product/software')">

@@ -9,6 +9,7 @@
         <p class="software-contain-item-name">{{software.title}}</p>
         <p class="software-contain-item-desc">{{software.desc}}</p>
       </div>
+      <i class="fill"></i><i class="fill"></i><i class="fill"></i>
     </div>
   </div>
 </template>
@@ -25,6 +26,13 @@ export default {
           src: '/weChat',
           title: '微信点菜',
           desc: '以微信为入口的，以软件商、经销商、商户、顾客为利益链条的，实现线上线下（O2O）完美对接的移动互联餐饮管理系统一揽子解决方案'
+        },
+        {
+          name: 'applets',
+          img: require('../../assets/images/Product/applets.png'),
+          src: '/applets',
+          title: '小程序点菜',
+          desc: '小程序相对于公众号，无需关注，扫码即可进入，消费者人流多了以后，网络不拥堵，用户体验好，操作简单快捷。客户可在小程序内完成点餐、外卖等操作，方便实用。'
         },
         {
           name: 'member',

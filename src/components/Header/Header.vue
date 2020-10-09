@@ -53,10 +53,10 @@ export default {
     return {
       navItems: [
         {
-          id: 0, desc: '首页', src: '/home', name: 'home'
+          id: 0, desc: '首页', src: '/', name: 'home'
         },
         {
-          id: 1, desc: '产品中心', src: '/product', name: 'product'
+          id: 1, desc: '餐饮系统', src: '/product', name: 'product'
         },
         {
           id: 2, desc: '食堂系统', src: '/canteen', name: 'canteen'
@@ -113,6 +113,10 @@ export default {
             {
               name: '微信点菜',
               src: '/weChat'
+            },
+            {
+              name: '小程序点菜',
+              src: '/applets'
             },
             {
               name: '微信会员',

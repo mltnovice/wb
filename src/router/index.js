@@ -31,16 +31,13 @@ import About from '@/components/About/About'
 import Software from '@/components/software/Software'
 import Mobile from '@/components/Mobile/Mobile'
 import Solution from '@/components/Solution/Solution'
+import Applets from '@/components/Applets/Applets'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    redirect: 'home'
-  },
-  {
-    path: '/home',
     name: 'Home',
     component: Home,
     meta: {
@@ -135,6 +132,14 @@ const routes = [
     component: WeChat,
     meta: {
       title: '微信点菜'
+    }
+  },
+  {
+    path: '/applets',
+    name: 'Applets',
+    component: Applets,
+    meta: {
+      title: '小程序点菜'
     }
   },
   {
