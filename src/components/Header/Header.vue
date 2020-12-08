@@ -53,7 +53,7 @@ export default {
     return {
       navItems: [
         {
-          id: 0, desc: '首页', src: '/', name: 'home'
+          id: 0, desc: '首页', src: '/', name: ''
         },
         {
           id: 1, desc: '餐饮系统', src: '/product', name: 'product'
@@ -189,7 +189,8 @@ export default {
   },
   methods: {
     routerLinkCls (name) {
-      const path = this.$route.path.slice(1)
+      const reg = /^\/\w*\/*/
+      const path = reg.exec(this.$route.path)[0].replace(/^\//, '').replace(/\/$/, '')
       if (name === path) {
         return 'nav-item-active'
       }
